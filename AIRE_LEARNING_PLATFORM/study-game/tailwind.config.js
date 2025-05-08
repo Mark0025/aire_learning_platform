@@ -1,7 +1,7 @@
-/** @type {import('./$node_modules/tailwindcss/dist/lib.mts').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './public/**/*.{html,js}',
+    './src/public/**/*.{html,js}',
     './src/**/*.{html,js}'
   ],
   theme: {

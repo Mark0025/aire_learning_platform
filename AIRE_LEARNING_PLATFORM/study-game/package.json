@@ -8,7 +8,8 @@
     "dev:sim": "node src/scripts/dev-simulator.js",
     "dev:with-sim": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\" \"npm run dev:sim\"",
     "build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css",
-    "vercel-build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css && mkdir -p src/learning/modules && touch src/learning/modules/index.json",
+    "vercel-build": "npm install && npm run build && mkdir -p src/learning/modules && touch src/learning/modules/index.json",
+    "postinstall": "npm list tailwindcss || npm install tailwindcss@4.1.5 @tailwindcss/cli@4.1.5 autoprefixer@10.4.21 postcss@8.5.3",
     "import-module": "node src/learning/scripts/import-module.js",
     "list-modules": "node -e \"console.table(require('./src/learning/modules/index.json').modules.map(m => ({moduleId: m.moduleId, name: m.moduleName, questions: m.questionCount, flashcards: m.flashcardCount})))\""
   },
