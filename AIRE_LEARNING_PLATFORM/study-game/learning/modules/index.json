@@ -1,13 +1,37 @@
 {
   "modules": [
     {
-      "moduleId": "aire-intro",
-      "moduleName": "Introduction to AI Real Estate Investing",
-      "description": "Learn the fundamentals of using AI in real estate investing",
-      "questionCount": 0,
-      "flashcardCount": 0,
-      "lastUpdated": "2023-09-20T10:00:00.000Z",
-      "author": "AIRE Team"
+      "moduleId": "intro-to-ai",
+      "moduleName": "Introduction to AI",
+      "description": "Learn the fundamentals of artificial intelligence",
+      "category": "Artificial Intelligence",
+      "difficulty": "beginner",
+      "tags": ["AI", "fundamentals"],
+      "questionCount": 20,
+      "flashcardCount": 10,
+      "updatedAt": "2023-09-20T10:00:00.000Z"
+    },
+    {
+      "moduleId": "js-basics",
+      "moduleName": "JavaScript Basics",
+      "description": "Learn the fundamentals of JavaScript programming",
+      "category": "Programming",
+      "difficulty": "beginner",
+      "tags": ["JavaScript", "programming", "web development"],
+      "questionCount": 15,
+      "flashcardCount": 8,
+      "updatedAt": "2023-09-15T10:00:00.000Z"
+    },
+    {
+      "moduleId": "tauros-module1",
+      "moduleName": "Tauros Module 1",
+      "description": "First module in the Tauros series",
+      "category": "Tauros",
+      "difficulty": "intermediate",
+      "tags": ["Tauros", "module"],
+      "questionCount": 12,
+      "flashcardCount": 6,
+      "updatedAt": "2023-10-01T10:00:00.000Z"
     }
   ]
 }

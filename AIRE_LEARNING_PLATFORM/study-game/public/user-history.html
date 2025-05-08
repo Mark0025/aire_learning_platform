@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIRE Learning Platform - Learning History</title>
   <link rel="stylesheet" href="style.css">
+  <script src="js/shared-assets.js"></script>
   <style>
     .logo-container {
       display: flex;
@@ -70,8 +71,8 @@
 <body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen">
   <div class="container mx-auto px-4 py-8">
     <header class="text-center mb-8">
-      <div class="logo-container">
-        <img src="images/aire-logo.svg" alt="AIRE Logo" class="logo-img">
+      <div class="logo-container" id="logo-container">
+        <!-- Logo will be inserted by JavaScript -->
       </div>
       <h1 class="text-4xl font-bold text-indigo-800 mb-2">AIRE Learning Platform</h1>
       <p class="text-lg text-gray-600">Track your real estate learning progress</p>
@@ -274,6 +275,9 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Insert the logo using the shared asset
+      insertAireLogo('logo-container');
+      
       // DOM Elements
       const userIdDisplay = document.getElementById('user-id-display');
       const userStatsSection = document.getElementById('user-stats');

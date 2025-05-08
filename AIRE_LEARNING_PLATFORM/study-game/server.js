@@ -5,11 +5,12 @@ const multer = require('multer');
 const { promisify } = require('util');
 const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
+const mime = require('mime');
 // Import the module generator
 const { generateModuleFromText, saveModule } = require('./scripts/generate-module-from-text.js');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.NODE_PORT || process.env.PORT || 3000;
 
 // Promisify fs functions
 const readFile = promisify(fs.readFile);
@@ -37,9 +38,9 @@ const upload = multer({
 });
 
 // Configure express.static with proper MIME types
-express.static.mime.define({
+mime.define({
   'image/svg+xml': ['svg']
-});
+}, { force: true });
 
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
