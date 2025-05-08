@@ -1,52 +1,13 @@
 {
   "modules": [
     {
-      "moduleId": "intro-to-ai",
-      "moduleName": "Introduction to Artificial Intelligence",
-      "description": "Learn about the fundamentals of AI, including key concepts, history, types of AI, applications, and ethical considerations.",
-      "category": "Computer Science",
-      "difficulty": "beginner",
-      "tags": [
-        "artificial intelligence",
-        "machine learning",
-        "AI ethics",
-        "computer science"
-      ],
-      "coverImage": "",
-      "questionCount": 300,
-      "flashcardCount": 10,
-      "updatedAt": "2025-05-07T20:08:28.425Z"
-    },
-    {
-      "moduleId": "js-basics",
-      "moduleName": "JavaScript Fundamentals",
-      "description": "Learn the basics of modern JavaScript programming including variables, data types, functions, and control structures.",
-      "category": "Programming",
-      "difficulty": "beginner",
-      "tags": [
-        "javascript",
-        "programming",
-        "web development"
-      ],
-      "questionCount": 15,
-      "flashcardCount": 12,
-      "updatedAt": "2023-05-15T12:00:00Z"
-    },
-    {
-      "moduleId": "tauros-module1",
-      "moduleName": "Tauros Module 1: Project Basics",
-      "description": "Learn the fundamentals of the Tauros project, including goals, prompt formats, and requirements.",
-      "category": "Tauros",
-      "difficulty": "beginner",
-      "tags": [
-        "tauros",
-        "introduction",
-        "prompts"
-      ],
-      "coverImage": "/assets/tauros-logo.jpg",
-      "questionCount": 10,
-      "flashcardCount": 8,
-      "updatedAt": "2025-05-07T19:30:00Z"
+      "moduleId": "aire-intro",
+      "moduleName": "Introduction to AI Real Estate Investing",
+      "description": "Learn the fundamentals of using AI in real estate investing",
+      "questionCount": 0,
+      "flashcardCount": 0,
+      "lastUpdated": "2023-09-20T10:00:00.000Z",
+      "author": "AIRE Team"
     }
   ]
 }

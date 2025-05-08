@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning Platform</title>
+  <title>AIRE Learning Platform</title>
   <link rel="stylesheet" href="style.css">
   <style>
     #dev-tools-bottom {
@@ -27,13 +27,28 @@
     #dev-tools-bottom button:hover {
       background-color: #2563eb; /* bg-blue-600 */
     }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .logo-img {
+      max-width: 200px;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen">
   <div class="container mx-auto px-4 py-8">
     <header class="text-center mb-8">
-      <h1 class="text-4xl font-bold text-indigo-800 mb-2">🐃 Learning Platform</h1>
-      <p class="text-lg text-gray-600">Test your knowledge with interactive tools</p>
+      <div class="logo-container">
+        <img src="images/aire-logo.svg" alt="AIRE Logo" class="logo-img">
+      </div>
+      <h1 class="text-4xl font-bold text-indigo-800 mb-2">AIRE Learning Platform</h1>
+      <p class="text-lg text-gray-600">Master real estate investing with interactive tools</p>
       
       <nav class="mt-4">
         <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold mr-4">Quiz Game</a>

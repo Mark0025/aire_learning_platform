@@ -36,6 +36,11 @@ const upload = multer({
   }
 });
 
+// Configure express.static with proper MIME types
+express.static.mime.define({
+  'image/svg+xml': ['svg']
+});
+
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 

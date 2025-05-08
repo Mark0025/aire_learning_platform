@@ -1,17 +1,20 @@
-# Tauros Study Game
+# AIRE Learning Platform - Study Game
 
-A simple web-based quiz game to help you study the content from Tauros Module 1.
+![AIRE Logo](public/images/aire-logo.svg)
+
+A comprehensive web-based quiz game designed to help real estate investors and professionals master essential concepts and strategies through interactive learning.
 
 ## Features
 
-- Interactive quiz with 10 questions about Tauros Module 1
-- Immediate feedback for correct/incorrect answers with explanations
-- Score tracking
-- Review answers at the end of the quiz
-- Mobile-friendly design with Tailwind CSS-like styling
-- Uses JSON format for question data
+- Interactive quizzes covering various real estate investment topics and strategies
+- Immediate feedback for correct/incorrect answers with detailed explanations
+- Score tracking and performance analytics
+- Review answers to reinforce learning
+- Mobile-friendly design with modern styling
+- Uses JSON format for question data, enabling easy content updates
 - Option to lock answers after selection (for real testing scenarios)
-- Versatile study tool that can be adapted for any subject
+- Versatile study tool that can be adapted for any real estate investing subject
+- Custom SVG logo reflecting the AIRE branding
 
 ## Getting Started
 
@@ -54,14 +57,15 @@ The application will be available at http://localhost:3000
 
 - `public/` - Contains the front-end files
   - `index.html` - Main HTML file
-  - `style.css` - CSS with Tailwind-like utility classes
-  - `module1.json` - Questions data in JSON format
+  - `style.css` - CSS with modern styling
+  - `images/` - Contains logos and images
   - `game.js` - Game logic
-- `server.js` - Simple Express server to serve the application
+- `data/` - Contains question data files
+- `server.js` - Express server to serve the application
 
 ## Adding More Modules
 
-You can add more modules by creating new JSON files following the same structure as module1.json. The format is:
+You can add more modules by creating new JSON files following the same structure. The format is:
 
 ```json
 {
@@ -82,9 +86,15 @@ You can add more modules by creating new JSON files following the same structure
 
 - **Practice Mode**: Leave "Lock answers" unchecked to learn the material
 - **Test Mode**: Check "Lock answers" to simulate a real test environment
-- Create your own module JSON files for different subjects
+- Create your own module JSON files for different real estate investment topics
 - Review your answers at the end to understand areas that need more focus
+
+## About AIRE
+
+AIRE (AI Real Estate) is revolutionizing the real estate investing landscape with cutting-edge AI technology. Our mission is to empower investors with the knowledge, tools, and strategies needed to succeed in today's competitive market.
+
+Visit [aireinvestor.com](https://aireinvestor.com) to learn more about our services and products.
 
 ## License
 
-This project is open-source and available for educational purposes. 
+This project is proprietary software owned by AIRE. All rights reserved. 
