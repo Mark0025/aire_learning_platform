@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Module | Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-indigo-800 mb-2">🐃 Learning Platform</h1>
+      <p class="text-lg text-gray-600">Upload your own learning modules</p>
+      
+      <nav class="mt-4">
+        <a href="index.html" class="text-indigo-600 hover:text-indigo-800 mr-4">Quiz Game</a>
+        <a href="flashcards.html" class="text-indigo-600 hover:text-indigo-800 mr-4">Flashcards</a>
+        <a href="upload.html" class="text-indigo-600 hover:text-indigo-800 font-bold">Upload</a>
+      </nav>
+    </header>
+
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-6">Upload Learning Module</h2>
+      
+      <!-- Tab navigation -->
+      <div class="border-b border-gray-200 mb-6">
+        <ul class="flex flex-wrap -mb-px">
+          <li class="mr-2">
+            <a href="#" class="tab-link inline-block p-4 border-b-2 border-indigo-600 rounded-t-lg active text-indigo-600" 
+               data-tab="json-upload">JSON File Upload</a>
+          </li>
+          <li class="mr-2">
+            <a href="#" class="tab-link inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" 
+               data-tab="text-upload">Text To Questions</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- JSON Upload Tab Content -->
+      <div id="json-upload" class="tab-content">
+        <div class="mb-8">
+          <p class="text-gray-600 mb-4">
+            Upload your own learning module as a JSON file. The file must follow the required schema.
+          </p>
+          
+          <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-6">
+            <h3 class="text-lg font-medium text-blue-800 mb-2">Template Info</h3>
+            <p class="text-blue-700 mb-2">Your JSON file needs to include:</p>
+            <ul class="list-disc list-inside text-blue-700 mb-3">
+              <li>moduleId - A unique identifier</li>
+              <li>moduleName - A display name</li>
+              <li>questions - An array of question objects</li>
+            </ul>
+            <a href="/learning/templates/example-module.json" download class="inline-flex items-center text-blue-700 hover:underline">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z"></path>
+              </svg>
+              Download Template
+            </a>
+          </div>
+        </div>
+        
+        <form id="upload-form" class="space-y-6">
+          <div>
+            <label for="module-file" class="block text-sm font-medium text-gray-700 mb-2">Select Module File (JSON)</label>
+            <input type="file" id="module-file" name="module-file" accept=".json" 
+                   class="w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+          </div>
+          
+          <div id="file-preview" class="hidden">
+            <h3 class="text-lg font-medium text-gray-700 mb-2">File Preview</h3>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="flex justify-between">
+                <p><strong>Module ID:</strong> <span id="preview-id"></span></p>
+                <p><strong>Module Name:</strong> <span id="preview-name"></span></p>
+              </div>
+              <p class="mt-2"><strong>Questions:</strong> <span id="preview-questions"></span></p>
+              <p><strong>Flashcards:</strong> <span id="preview-flashcards"></span></p>
+            </div>
+          </div>
+          
+          <div id="validation-results" class="hidden p-4 rounded-lg mb-4">
+            <!-- Validation results will be shown here -->
+          </div>
+          
+          <div class="flex justify-end">
+            <button type="submit" id="upload-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+              Upload Module
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Text Upload Tab Content -->
+      <div id="text-upload" class="tab-content hidden">
+        <div class="mb-8">
+          <p class="text-gray-600 mb-4">
+            Generate a module with automatically created questions from your text content. 
+            The system will analyze your text and create relevant quiz questions.
+          </p>
+          
+          <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-6">
+            <h3 class="text-lg font-medium text-blue-800 mb-2">How It Works</h3>
+            <p class="text-blue-700 mb-3">Simply paste your educational text and our system will:</p>
+            <ul class="list-disc list-inside text-blue-700">
+              <li>Analyze your text using Natural Language Processing</li>
+              <li>Identify key concepts and information</li>
+              <li>Automatically generate quiz questions</li>
+              <li>Create a complete learning module</li>
+            </ul>
+          </div>
+        </div>
+        
+        <form id="text-form" class="space-y-6">
+          <div>
+            <label for="creator-name" class="block text-sm font-medium text-gray-700 mb-2">Your Name (Creator)</label>
+            <input type="text" id="creator-name" name="creator-name" required
+                   placeholder="e.g., John Smith"
+                   class="w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <p class="text-xs text-gray-500 mt-1">This will be used to identify modules you create</p>
+          </div>
+          
+          <div class="border p-4 border-gray-200 rounded-lg">
+            <h3 class="text-md font-medium text-gray-700 mb-3">Advanced Options (Optional)</h3>
+            
+            <div class="mb-4">
+              <label for="module-id" class="block text-sm font-medium text-gray-700 mb-2">Custom Module ID</label>
+              <input type="text" id="module-id" name="module-id"
+                     placeholder="Auto-generated if left empty"
+                     class="w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+              <p class="text-xs text-gray-500 mt-1">Use only letters, numbers, and hyphens. No spaces.</p>
+            </div>
+            
+            <div class="mb-4">
+              <label for="module-name" class="block text-sm font-medium text-gray-700 mb-2">Custom Module Name</label>
+              <input type="text" id="module-name" name="module-name"
+                     placeholder="Auto-generated from your text if left empty"
+                     class="w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            
+            <div>
+              <label for="max-questions" class="block text-sm font-medium text-gray-700 mb-2">Maximum Questions</label>
+              <input type="number" id="max-questions" name="max-questions" min="5" max="200" value="50"
+                     class="w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+              <p class="text-xs text-gray-500 mt-1">Limit: 5-200 questions</p>
+            </div>
+          </div>
+          
+          <div>
+            <label for="content-text" class="block text-sm font-medium text-gray-700 mb-2">Educational Content Text</label>
+            <textarea id="content-text" name="content-text" rows="12" required
+                      placeholder="Paste your educational text content here. The more detailed and structured, the better the questions will be."
+                      class="w-full p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            <p class="text-xs text-gray-500 mt-1">Minimum 500 characters recommended for good results</p>
+          </div>
+          
+          <div class="flex justify-end">
+            <button type="submit" id="generate-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+              Generate Module
+            </button>
+          </div>
+        </form>
+        
+        <div id="processing-indicator" class="hidden mt-6 p-4 bg-blue-100 text-blue-700 rounded-lg text-center">
+          <div class="animate-pulse flex flex-col items-center">
+            <svg class="w-10 h-10 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+            <p class="font-medium">Processing your text...</p>
+            <p class="mt-2">This may take a few moments depending on the text length.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Shared Success/Error Messages -->
+      <div id="upload-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg">
+        <p class="font-medium">Module created successfully!</p>
+        <p class="mt-2">Your module is now available in the quiz and flashcard sections.</p>
+        <p class="mt-4">
+          <a href="index.html" id="try-module-link" class="text-green-700 hover:underline font-semibold">
+            Try your module now →
+          </a>
+        </p>
+      </div>
+      
+      <div id="upload-error" class="hidden mt-6 p-4 bg-red-100 text-red-700 rounded-lg">
+        <p class="font-medium">Error creating module</p>
+        <p id="error-message" class="mt-2"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab switching functionality
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Remove active class from all tabs
+          tabLinks.forEach(l => {
+            l.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+            l.classList.add('hover:text-gray-600', 'hover:border-gray-300', 'border-transparent');
+          });
+          
+          // Add active class to clicked tab
+          link.classList.add('active', 'text-indigo-600', 'border-indigo-600');
+          link.classList.remove('hover:text-gray-600', 'hover:border-gray-300', 'border-transparent');
+          
+          // Hide all tab contents
+          tabContents.forEach(content => {
+            content.classList.add('hidden');
+          });
+          
+          // Show the selected tab content
+          const tabId = link.getAttribute('data-tab');
+          document.getElementById(tabId).classList.remove('hidden');
+          
+          // Hide any success/error messages when switching tabs
+          document.getElementById('upload-success').classList.add('hidden');
+          document.getElementById('upload-error').classList.add('hidden');
+        });
+      });
+      
+      // JSON Upload functionality
+      const uploadForm = document.getElementById('upload-form');
+      const moduleFileInput = document.getElementById('module-file');
+      const uploadBtn = document.getElementById('upload-btn');
+      const filePreview = document.getElementById('file-preview');
+      const previewId = document.getElementById('preview-id');
+      const previewName = document.getElementById('preview-name');
+      const previewQuestions = document.getElementById('preview-questions');
+      const previewFlashcards = document.getElementById('preview-flashcards');
+      const validationResults = document.getElementById('validation-results');
+      const uploadSuccess = document.getElementById('upload-success');
+      const uploadError = document.getElementById('upload-error');
+      const errorMessage = document.getElementById('error-message');
+      const tryModuleLink = document.getElementById('try-module-link');
+      
+      // Handle file selection for preview
+      moduleFileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (!file) {
+          filePreview.classList.add('hidden');
+          uploadBtn.disabled = true;
+          return;
+        }
+        
+        // Read the file and validate it
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const content = JSON.parse(e.target.result);
+            
+            // Basic validation
+            let isValid = true;
+            let errors = [];
+            
+            if (!content.moduleId) {
+              isValid = false;
+              errors.push('Missing required field: moduleId');
+            }
+            
+            if (!content.moduleName) {
+              isValid = false;
+              errors.push('Missing required field: moduleName');
+            }
+            
+            if (!content.questions || !Array.isArray(content.questions) || content.questions.length === 0) {
+              isValid = false;
+              errors.push('Missing or invalid questions array');
+            } else {
+              // Validate each question
+              content.questions.forEach((q, index) => {
+                if (!q.id) errors.push(`Question ${index + 1}: Missing id`);
+                if (!q.question) errors.push(`Question ${index + 1}: Missing question text`);
+                if (!q.options || !Array.isArray(q.options) || q.options.length < 2) {
+                  errors.push(`Question ${index + 1}: Missing or invalid options array`);
+                }
+                if (q.correctAnswer === undefined || q.correctAnswer === null) {
+                  errors.push(`Question ${index + 1}: Missing correctAnswer`);
+                }
+              });
+            }
+            
+            // Show validation results
+            validationResults.classList.remove('hidden');
+            if (errors.length > 0) {
+              validationResults.className = 'p-4 bg-red-100 text-red-700 rounded-lg mb-4';
+              validationResults.innerHTML = `
+                <p class="font-medium">Validation Errors:</p>
+                <ul class="list-disc list-inside mt-2">
+                  ${errors.map(err => `<li>${err}</li>`).join('')}
+                </ul>
+              `;
+              uploadBtn.disabled = true;
+            } else {
+              validationResults.className = 'p-4 bg-green-100 text-green-700 rounded-lg mb-4';
+              validationResults.innerHTML = '<p class="font-medium">File is valid! Ready to upload.</p>';
+              uploadBtn.disabled = false;
+              
+              // Show preview
+              filePreview.classList.remove('hidden');
+              previewId.textContent = content.moduleId;
+              previewName.textContent = content.moduleName;
+              previewQuestions.textContent = content.questions ? content.questions.length : 0;
+              previewFlashcards.textContent = content.flashcards ? content.flashcards.length : 0;
+            }
+          } catch (err) {
+            console.error('Error parsing JSON:', err);
+            validationResults.classList.remove('hidden');
+            validationResults.className = 'p-4 bg-red-100 text-red-700 rounded-lg mb-4';
+            validationResults.innerHTML = `
+              <p class="font-medium">Invalid JSON format:</p>
+              <p class="mt-2">${err.message}</p>
+            `;
+            uploadBtn.disabled = true;
+          }
+        };
+        reader.readAsText(file);
+      });
+      
+      // Handle JSON form submission
+      uploadForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        
+        const file = moduleFileInput.files[0];
+        if (!file) return;
+        
+        // Create form data
+        const formData = new FormData();
+        formData.append('module', file);
+        
+        try {
+          // Reset previous results
+          uploadSuccess.classList.add('hidden');
+          uploadError.classList.add('hidden');
+          
+          // Send the file to the server
+          const response = await fetch('/api/upload-module', {
+            method: 'POST',
+            body: formData
+          });
+          
+          if (!response.ok) {
+            throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+          }
+          
+          const result = await response.json();
+          
+          // Update try module link
+          tryModuleLink.href = `index.html?module=${result.moduleId}`;
+          
+          // Show success message
+          uploadSuccess.classList.remove('hidden');
+          uploadForm.reset();
+          filePreview.classList.add('hidden');
+          validationResults.classList.add('hidden');
+          uploadBtn.disabled = true;
+        } catch (err) {
+          console.error('Upload error:', err);
+          
+          // Show error message
+          uploadError.classList.remove('hidden');
+          errorMessage.textContent = err.message || 'Unknown error occurred';
+        }
+      });
+
+      // Text Upload functionality
+      const textForm = document.getElementById('text-form');
+      const creatorNameInput = document.getElementById('creator-name');
+      const moduleIdInput = document.getElementById('module-id');
+      const moduleNameInput = document.getElementById('module-name');
+      const maxQuestionsInput = document.getElementById('max-questions');
+      const contentTextArea = document.getElementById('content-text');
+      const generateBtn = document.getElementById('generate-btn');
+      const processingIndicator = document.getElementById('processing-indicator');
+      
+      // Validate module ID format (letters, numbers, hyphens only)
+      moduleIdInput.addEventListener('input', () => {
+        moduleIdInput.value = moduleIdInput.value.replace(/[^a-z0-9-]/gi, '').toLowerCase();
+      });
+      
+      // Generate module ID from text excerpt
+      function generateModuleId(text, creatorName) {
+        // Take the first 30 characters of text, remove special chars, and append timestamp
+        const excerpt = text.substring(0, 30).trim()
+          .replace(/[^a-z0-9]/gi, '-')
+          .replace(/-+/g, '-')
+          .toLowerCase();
+        
+        // Add creator name as prefix if available
+        const prefix = creatorName ? 
+          creatorName.trim().toLowerCase().replace(/[^a-z0-9]/gi, '-').substring(0, 15) + '-' : 
+          '';
+        
+        // Add timestamp for uniqueness
+        const timestamp = Date.now().toString().substr(-6);
+        
+        return `${prefix}${excerpt.substring(0, 20)}-${timestamp}`.replace(/-+/g, '-');
+      }
+      
+      // Generate module name from text's first sentence
+      function generateModuleName(text) {
+        // Find the first sentence (ending with ., ! or ?)
+        const match = text.match(/^[^.!?]+[.!?]/);
+        
+        if (match && match[0]) {
+          // Limit to 50 chars and ensure it starts with capital letter
+          let title = match[0].trim().substring(0, 50);
+          if (title.endsWith('.') || title.endsWith('!') || title.endsWith('?')) {
+            title = title.substring(0, title.length - 1);
+          }
+          return title.charAt(0).toUpperCase() + title.slice(1);
+        }
+        
+        // Fallback to first 50 chars if no sentence found
+        return text.substring(0, 50).trim() + '...';
+      }
+      
+      // Handle text form submission
+      textForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        
+        // Get form values
+        const creatorName = creatorNameInput.value.trim();
+        let moduleId = moduleIdInput.value.trim();
+        let moduleName = moduleNameInput.value.trim();
+        const maxQuestions = parseInt(maxQuestionsInput.value, 10);
+        const text = contentTextArea.value.trim();
+        
+        // Basic validation
+        if (!creatorName) {
+          alert('Please enter your name');
+          creatorNameInput.focus();
+          return;
+        }
+        
+        if (!text || text.length < 100) {
+          alert('Please enter more text content (minimum 100 characters)');
+          contentTextArea.focus();
+          return;
+        }
+        
+        // Auto-generate fields if not provided
+        if (!moduleId) {
+          moduleId = generateModuleId(text, creatorName);
+        }
+        
+        if (!moduleName) {
+          moduleName = generateModuleName(text);
+        }
+        
+        // Auto-generate description from text
+        const description = `Module created by ${creatorName} from text content`;
+        
+        try {
+          // Reset previous results and show processing indicator
+          uploadSuccess.classList.add('hidden');
+          uploadError.classList.add('hidden');
+          processingIndicator.classList.remove('hidden');
+          generateBtn.disabled = true;
+          
+          // Send the text to the server
+          const response = await fetch('/api/generate-module-from-text', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              moduleId,
+              moduleName,
+              description,
+              maxQuestions,
+              text
+            })
+          });
+          
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || `Server returned ${response.status}: ${response.statusText}`);
+          }
+          
+          const result = await response.json();
+          
+          // Update try module link
+          tryModuleLink.href = `index.html?module=${result.moduleId}`;
+          
+          // Show success message
+          processingIndicator.classList.add('hidden');
+          uploadSuccess.classList.remove('hidden');
+          
+          // Add question count to success message
+          const successMessage = uploadSuccess.querySelector('p.mt-2');
+          successMessage.textContent = `Your module with ${result.questionCount} questions is now available in the quiz and flashcard sections.`;
+          
+          // Reset form
+          textForm.reset();
+          generateBtn.disabled = false;
+        } catch (err) {
+          console.error('Text processing error:', err);
+          
+          // Hide processing and show error
+          processingIndicator.classList.add('hidden');
+          uploadError.classList.remove('hidden');
+          errorMessage.textContent = err.message || 'Unknown error occurred';
+          generateBtn.disabled = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

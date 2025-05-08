@@ -1,0 +1,45 @@
+{
+  "moduleId": "your-module-id",
+  "moduleName": "Your Module Name",
+  "description": "A brief description of this module and what it covers.",
+  "category": "Category Name",
+  "difficulty": "beginner",
+  "tags": ["tag1", "tag2", "tag3"],
+  "coverImage": "/assets/your-cover-image.jpg",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Your first question goes here?",
+      "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+      "correctAnswer": 0,
+      "explanation": "Explanation for why Option 1 is correct.",
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "tags": ["concept1", "basics"]
+    },
+    {
+      "id": 2,
+      "question": "Your second question goes here?",
+      "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+      "correctAnswer": 1,
+      "explanation": "Explanation for why Option 2 is correct.",
+      "type": "multiple-choice",
+      "difficulty": "medium",
+      "tags": ["concept2"]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "front": "Question or concept on front side",
+      "back": "Answer or explanation on back side",
+      "tags": ["concept1", "basics"]
+    },
+    {
+      "id": 2,
+      "front": "Another question or concept",
+      "back": "Another answer or explanation",
+      "tags": ["concept2"]
+    }
+  ]
+}

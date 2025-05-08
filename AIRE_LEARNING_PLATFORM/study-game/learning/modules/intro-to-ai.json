@@ -1,0 +1,3669 @@
+{
+  "moduleId": "intro-to-ai",
+  "moduleName": "Introduction to Artificial Intelligence",
+  "description": "Learn about the fundamentals of AI, including key concepts, history, types of AI, applications, and ethical considerations.",
+  "category": "Computer Science",
+  "difficulty": "beginner",
+  "tags": [
+    "artificial intelligence",
+    "machine learning",
+    "AI ethics",
+    "computer science"
+  ],
+  "createdAt": "2023-05-20T14:30:00Z",
+  "updatedAt": "2025-05-07T20:08:28.425Z",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Artificial Intelligence (AI)?",
+      "options": [
+        "A type of computer hardware designed to mimic human brains",
+        "The simulation of human intelligence in machines programmed to think and learn like humans",
+        "A programming language used to create smart software",
+        "Robots that look and act like humans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Artificial Intelligence refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. It involves creating systems capable of performing tasks that typically require human intelligence."
+    },
+    {
+      "id": 2,
+      "question": "When was the term 'Artificial Intelligence' first coined?",
+      "options": [
+        "1943",
+        "1956",
+        "1965",
+        "1997"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The term 'Artificial Intelligence' was first coined by John McCarthy in 1956 at the Dartmouth Conference, which is widely considered the founding event of AI as a field."
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is a type of AI based on capabilities?",
+      "options": [
+        "Supervised AI",
+        "Unsupervised AI",
+        "Narrow AI",
+        "Reinforcement AI"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Based on capabilities, AI is often categorized as Narrow AI (focused on specific tasks), General AI (broad human-like intelligence), and Superintelligent AI (surpassing human intelligence). Supervised, Unsupervised, and Reinforcement are types of machine learning approaches."
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between AI and Machine Learning?",
+      "options": [
+        "They are completely unrelated technologies",
+        "AI is a subset of Machine Learning",
+        "Machine Learning is a subset of AI",
+        "They are different terms for the same technology"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Machine Learning is a subset of Artificial Intelligence. ML involves training algorithms to learn patterns from data and make predictions or decisions, while AI is the broader concept of machines being able to perform tasks that would require intelligence if done by humans."
+    },
+    {
+      "id": 5,
+      "question": "What is the 'Turing Test' in AI?",
+      "options": [
+        "A test to measure a computer's processing speed",
+        "A test to determine if a machine can exhibit human-like intelligence",
+        "A test to check if AI systems are free from programming errors",
+        "A test to verify if an AI can operate autonomously"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Turing Test, proposed by Alan Turing in 1950, is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human. It involves a human evaluator who attempts to distinguish between responses from a human and an AI."
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is NOT a common application of AI?",
+      "options": [
+        "Natural Language Processing",
+        "Computer Vision",
+        "Manual Data Entry",
+        "Autonomous Vehicles"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Manual Data Entry is not an AI application but rather a task that AI systems can automate. Natural Language Processing, Computer Vision, and Autonomous Vehicles are all significant applications of AI technology."
+    },
+    {
+      "id": 7,
+      "question": "What does 'Deep Learning' refer to in AI?",
+      "options": [
+        "Learning that happens in deep space environments",
+        "Learning that takes a long time to complete",
+        "A subset of machine learning using neural networks with many layers",
+        "The deepest level of AI understanding humans have achieved"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Deep Learning is a subset of machine learning that uses neural networks with multiple (deep) layers. These deep neural networks can automatically discover representations needed for detection or classification from raw data."
+    },
+    {
+      "id": 8,
+      "question": "What is a primary concern in AI ethics?",
+      "options": [
+        "Making AI systems that are too intelligent",
+        "Ensuring AI systems don't use too much electrical power",
+        "Privacy and surveillance concerns with AI systems",
+        "Preventing AI systems from being too expensive"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Privacy and surveillance are major ethical concerns in AI development. Other key concerns include bias and discrimination, transparency, accountability, job displacement, and the potential for autonomous systems to cause harm."
+    },
+    {
+      "id": 9,
+      "question": "What is a neural network in AI?",
+      "options": [
+        "A physical network of computers designed to mimic the human brain",
+        "A model inspired by the human brain that consists of interconnected nodes (neurons)",
+        "A network of AI researchers collaborating on projects",
+        "The hardware components that power AI systems"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A neural network is a computational model inspired by the human brain's structure. It consists of interconnected nodes (artificial neurons) organized in layers that can learn to recognize patterns in data through a process of training and adjustment."
+    },
+    {
+      "id": 10,
+      "question": "What is 'Computer Vision' in AI?",
+      "options": [
+        "Software that helps computers display better visuals",
+        "The field of AI that enables computers to interpret and understand visual information from the world",
+        "Special monitors designed for AI systems",
+        "The way computers visualize data in graphs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Computer Vision is the field of AI that enables computers to interpret and understand visual information from the world. It involves training computers to identify and process images and videos in a human-like manner."
+    },
+    {
+      "id": 11,
+      "question": "Which of these is an example of Natural Language Processing (NLP)?",
+      "options": [
+        "A robot that can walk autonomously",
+        "A system that can identify objects in images",
+        "A chatbot that can understand and respond to text messages",
+        "A program that plays chess at a professional level"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Natural Language Processing (NLP) involves AI systems that can understand, interpret, and generate human language. A chatbot that can understand and respond to text messages is a classic example of NLP in action."
+    },
+    {
+      "id": 12,
+      "question": "What is 'reinforcement learning' in AI?",
+      "options": [
+        "Learning by being reinforced with additional hardware",
+        "A technique where AI systems learn by receiving rewards or penalties for actions",
+        "Learning that reinforces existing knowledge without adding new information",
+        "A learning method that requires human reinforcement at every step"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Reinforcement learning is a machine learning technique where an agent learns to make decisions by performing actions and receiving rewards or penalties in response. The agent learns to maximize rewards over time through trial and error."
+    },
+    {
+      "id": 13,
+      "question": "Which company's AI system defeated the world champion in the game of Go in 2016?",
+      "options": [
+        "Microsoft",
+        "IBM",
+        "Google (DeepMind)",
+        "OpenAI"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AlphaGo, developed by Google's DeepMind, defeated world champion Lee Sedol in the complex board game Go in 2016. This was considered a major breakthrough in AI, as Go has significantly more possible positions than chess and requires intuition."
+    },
+    {
+      "id": 14,
+      "question": "What does AGI stand for in AI?",
+      "options": [
+        "Advanced Graphics Intelligence",
+        "Automated General Integration",
+        "Artificial General Intelligence",
+        "Algorithmic Growth Index"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AGI stands for Artificial General Intelligence, which refers to a hypothetical AI that has the ability to understand, learn, and apply knowledge across a wide range of tasks at a level equal to or beyond human intelligence."
+    },
+    {
+      "id": 15,
+      "question": "Which of these is NOT a common type of machine learning?",
+      "options": [
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Superseded learning"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Superseded learning is not a recognized type of machine learning. The main types are supervised learning (training with labeled data), unsupervised learning (finding patterns in unlabeled data), and reinforcement learning (learning through rewards and penalties)."
+    },
+    {
+      "id": 16,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Machine Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Machine Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 17,
+      "question": "What problem does regularization solve in Neural Networks models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Neural Networks adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 18,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 19,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 20,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 21,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 22,
+      "question": "Which early AI program, developed in the mid-1960s, could engage in conversation with humans about psychological problems?",
+      "options": [
+        "SHRDLU",
+        "MYCIN",
+        "ELIZA",
+        "Deep Blue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ELIZA was an early natural language processing program created by Joseph Weizenbaum in the mid-1960s that simulated a psychotherapist by using pattern matching and substitution methods."
+    },
+    {
+      "id": 23,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 24,
+      "question": "What is an Deep Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Deep Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 25,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Reinforcement Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Reinforcement Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 26,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 27,
+      "question": "How is AI currently being used in Healthcare?",
+      "options": [
+        "To completely replace human workers in Healthcare",
+        "For administrative tasks only in Healthcare",
+        "To automate routine tasks and assist professionals in Healthcare",
+        "AI is not yet applicable to Healthcare"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Healthcare to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 28,
+      "question": "What is a major challenge for AI implementation in Finance?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Finance is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 29,
+      "question": "Which type of AI technology has shown the most promise in Transportation?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Transportation due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 30,
+      "question": "How is AI currently being used in Education?",
+      "options": [
+        "To completely replace human workers in Education",
+        "For administrative tasks only in Education",
+        "To automate routine tasks and assist professionals in Education",
+        "AI is not yet applicable to Education"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Education to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 31,
+      "question": "What is a major challenge for AI implementation in Entertainment?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Entertainment is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 32,
+      "question": "Which type of AI technology has shown the most promise in Agriculture?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Agriculture due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 33,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 34,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 35,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 36,
+      "question": "What is a Machine Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Machine Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 37,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Neural Networks?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Neural Networks, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 38,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 39,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 40,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 41,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 42,
+      "question": "Who published the paper 'Computing Machinery and Intelligence' which proposed the Turing Test?",
+      "options": [
+        "John McCarthy",
+        "Alan Turing",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Alan Turing published the paper 'Computing Machinery and Intelligence' in 1950, which introduced what later became known as the Turing Test."
+    },
+    {
+      "id": 43,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 44,
+      "question": "What problem does regularization solve in Deep Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Deep Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 45,
+      "question": "What is an Reinforcement Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Reinforcement Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 46,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 47,
+      "question": "Which type of AI technology has shown the most promise in Healthcare?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Healthcare due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 48,
+      "question": "How is AI currently being used in Finance?",
+      "options": [
+        "To completely replace human workers in Finance",
+        "For administrative tasks only in Finance",
+        "To automate routine tasks and assist professionals in Finance",
+        "AI is not yet applicable to Finance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Finance to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 49,
+      "question": "What is a major challenge for AI implementation in Transportation?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Transportation is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 50,
+      "question": "Which type of AI technology has shown the most promise in Education?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Education due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 51,
+      "question": "How is AI currently being used in Entertainment?",
+      "options": [
+        "To completely replace human workers in Entertainment",
+        "For administrative tasks only in Entertainment",
+        "To automate routine tasks and assist professionals in Entertainment",
+        "AI is not yet applicable to Entertainment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Entertainment to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 52,
+      "question": "What is a major challenge for AI implementation in Agriculture?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Agriculture is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 53,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 54,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 55,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 56,
+      "question": "What problem does regularization solve in Machine Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Machine Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 57,
+      "question": "What is an Neural Networks algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Neural Networks that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 58,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 59,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 60,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 61,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 62,
+      "question": "What period in AI history is often referred to as the 'AI Winter'?",
+      "options": [
+        "The 1950s when AI research first began",
+        "The periods in the 1970s and 1980s-90s when funding and interest in AI decreased",
+        "The early 2000s before deep learning became popular",
+        "The current period of AI development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The term 'AI Winter' refers to periods (particularly in the 1970s and late 1980s through the 1990s) when funding and interest in AI research decreased due to disillusionment after initial high expectations weren't met."
+    },
+    {
+      "id": 63,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 64,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Deep Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Deep Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 65,
+      "question": "What problem does regularization solve in Reinforcement Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Reinforcement Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 66,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 67,
+      "question": "What is a major challenge for AI implementation in Healthcare?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Healthcare is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 68,
+      "question": "Which type of AI technology has shown the most promise in Finance?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Finance due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 69,
+      "question": "How is AI currently being used in Transportation?",
+      "options": [
+        "To completely replace human workers in Transportation",
+        "For administrative tasks only in Transportation",
+        "To automate routine tasks and assist professionals in Transportation",
+        "AI is not yet applicable to Transportation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Transportation to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 70,
+      "question": "What is a major challenge for AI implementation in Education?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Education is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 71,
+      "question": "Which type of AI technology has shown the most promise in Entertainment?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Entertainment due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 72,
+      "question": "How is AI currently being used in Agriculture?",
+      "options": [
+        "To completely replace human workers in Agriculture",
+        "For administrative tasks only in Agriculture",
+        "To automate routine tasks and assist professionals in Agriculture",
+        "AI is not yet applicable to Agriculture"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Agriculture to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 73,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 74,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 75,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 76,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Machine Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Machine Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 77,
+      "question": "What problem does regularization solve in Neural Networks models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Neural Networks adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 78,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 79,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 80,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 81,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 82,
+      "question": "Which early AI program, developed in the mid-1960s, could engage in conversation with humans about psychological problems?",
+      "options": [
+        "SHRDLU",
+        "MYCIN",
+        "ELIZA",
+        "Deep Blue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ELIZA was an early natural language processing program created by Joseph Weizenbaum in the mid-1960s that simulated a psychotherapist by using pattern matching and substitution methods."
+    },
+    {
+      "id": 83,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 84,
+      "question": "What is an Deep Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Deep Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 85,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Reinforcement Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Reinforcement Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 86,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 87,
+      "question": "How is AI currently being used in Healthcare?",
+      "options": [
+        "To completely replace human workers in Healthcare",
+        "For administrative tasks only in Healthcare",
+        "To automate routine tasks and assist professionals in Healthcare",
+        "AI is not yet applicable to Healthcare"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Healthcare to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 88,
+      "question": "What is a major challenge for AI implementation in Finance?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Finance is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 89,
+      "question": "Which type of AI technology has shown the most promise in Transportation?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Transportation due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 90,
+      "question": "How is AI currently being used in Education?",
+      "options": [
+        "To completely replace human workers in Education",
+        "For administrative tasks only in Education",
+        "To automate routine tasks and assist professionals in Education",
+        "AI is not yet applicable to Education"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Education to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 91,
+      "question": "What is a major challenge for AI implementation in Entertainment?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Entertainment is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 92,
+      "question": "Which type of AI technology has shown the most promise in Agriculture?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Agriculture due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 93,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 94,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 95,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 96,
+      "question": "What is a Machine Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Machine Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 97,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Neural Networks?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Neural Networks, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 98,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 99,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 100,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 101,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 102,
+      "question": "Who published the paper 'Computing Machinery and Intelligence' which proposed the Turing Test?",
+      "options": [
+        "John McCarthy",
+        "Alan Turing",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Alan Turing published the paper 'Computing Machinery and Intelligence' in 1950, which introduced what later became known as the Turing Test."
+    },
+    {
+      "id": 103,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 104,
+      "question": "What problem does regularization solve in Deep Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Deep Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 105,
+      "question": "What is an Reinforcement Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Reinforcement Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 106,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 107,
+      "question": "Which type of AI technology has shown the most promise in Healthcare?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Healthcare due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 108,
+      "question": "How is AI currently being used in Finance?",
+      "options": [
+        "To completely replace human workers in Finance",
+        "For administrative tasks only in Finance",
+        "To automate routine tasks and assist professionals in Finance",
+        "AI is not yet applicable to Finance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Finance to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 109,
+      "question": "What is a major challenge for AI implementation in Transportation?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Transportation is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 110,
+      "question": "Which type of AI technology has shown the most promise in Education?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Education due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 111,
+      "question": "How is AI currently being used in Entertainment?",
+      "options": [
+        "To completely replace human workers in Entertainment",
+        "For administrative tasks only in Entertainment",
+        "To automate routine tasks and assist professionals in Entertainment",
+        "AI is not yet applicable to Entertainment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Entertainment to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 112,
+      "question": "What is a major challenge for AI implementation in Agriculture?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Agriculture is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 113,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 114,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 115,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 116,
+      "question": "What problem does regularization solve in Machine Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Machine Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 117,
+      "question": "What is an Neural Networks algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Neural Networks that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 118,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 119,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 120,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 121,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 122,
+      "question": "What period in AI history is often referred to as the 'AI Winter'?",
+      "options": [
+        "The 1950s when AI research first began",
+        "The periods in the 1970s and 1980s-90s when funding and interest in AI decreased",
+        "The early 2000s before deep learning became popular",
+        "The current period of AI development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The term 'AI Winter' refers to periods (particularly in the 1970s and late 1980s through the 1990s) when funding and interest in AI research decreased due to disillusionment after initial high expectations weren't met."
+    },
+    {
+      "id": 123,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 124,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Deep Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Deep Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 125,
+      "question": "What problem does regularization solve in Reinforcement Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Reinforcement Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 126,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 127,
+      "question": "What is a major challenge for AI implementation in Healthcare?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Healthcare is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 128,
+      "question": "Which type of AI technology has shown the most promise in Finance?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Finance due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 129,
+      "question": "How is AI currently being used in Transportation?",
+      "options": [
+        "To completely replace human workers in Transportation",
+        "For administrative tasks only in Transportation",
+        "To automate routine tasks and assist professionals in Transportation",
+        "AI is not yet applicable to Transportation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Transportation to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 130,
+      "question": "What is a major challenge for AI implementation in Education?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Education is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 131,
+      "question": "Which type of AI technology has shown the most promise in Entertainment?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Entertainment due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 132,
+      "question": "How is AI currently being used in Agriculture?",
+      "options": [
+        "To completely replace human workers in Agriculture",
+        "For administrative tasks only in Agriculture",
+        "To automate routine tasks and assist professionals in Agriculture",
+        "AI is not yet applicable to Agriculture"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Agriculture to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 133,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 134,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 135,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 136,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Machine Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Machine Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 137,
+      "question": "What problem does regularization solve in Neural Networks models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Neural Networks adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 138,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 139,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 140,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 141,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 142,
+      "question": "Which early AI program, developed in the mid-1960s, could engage in conversation with humans about psychological problems?",
+      "options": [
+        "SHRDLU",
+        "MYCIN",
+        "ELIZA",
+        "Deep Blue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ELIZA was an early natural language processing program created by Joseph Weizenbaum in the mid-1960s that simulated a psychotherapist by using pattern matching and substitution methods."
+    },
+    {
+      "id": 143,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 144,
+      "question": "What is an Deep Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Deep Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 145,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Reinforcement Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Reinforcement Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 146,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 147,
+      "question": "How is AI currently being used in Healthcare?",
+      "options": [
+        "To completely replace human workers in Healthcare",
+        "For administrative tasks only in Healthcare",
+        "To automate routine tasks and assist professionals in Healthcare",
+        "AI is not yet applicable to Healthcare"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Healthcare to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 148,
+      "question": "What is a major challenge for AI implementation in Finance?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Finance is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 149,
+      "question": "Which type of AI technology has shown the most promise in Transportation?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Transportation due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 150,
+      "question": "How is AI currently being used in Education?",
+      "options": [
+        "To completely replace human workers in Education",
+        "For administrative tasks only in Education",
+        "To automate routine tasks and assist professionals in Education",
+        "AI is not yet applicable to Education"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Education to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 151,
+      "question": "What is a major challenge for AI implementation in Entertainment?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Entertainment is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 152,
+      "question": "Which type of AI technology has shown the most promise in Agriculture?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Agriculture due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 153,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 154,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 155,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 156,
+      "question": "What is a Machine Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Machine Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 157,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Neural Networks?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Neural Networks, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 158,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 159,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 160,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 161,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 162,
+      "question": "Who published the paper 'Computing Machinery and Intelligence' which proposed the Turing Test?",
+      "options": [
+        "John McCarthy",
+        "Alan Turing",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Alan Turing published the paper 'Computing Machinery and Intelligence' in 1950, which introduced what later became known as the Turing Test."
+    },
+    {
+      "id": 163,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 164,
+      "question": "What problem does regularization solve in Deep Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Deep Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 165,
+      "question": "What is an Reinforcement Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Reinforcement Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 166,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 167,
+      "question": "Which type of AI technology has shown the most promise in Healthcare?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Healthcare due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 168,
+      "question": "How is AI currently being used in Finance?",
+      "options": [
+        "To completely replace human workers in Finance",
+        "For administrative tasks only in Finance",
+        "To automate routine tasks and assist professionals in Finance",
+        "AI is not yet applicable to Finance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Finance to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 169,
+      "question": "What is a major challenge for AI implementation in Transportation?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Transportation is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 170,
+      "question": "Which type of AI technology has shown the most promise in Education?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Education due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 171,
+      "question": "How is AI currently being used in Entertainment?",
+      "options": [
+        "To completely replace human workers in Entertainment",
+        "For administrative tasks only in Entertainment",
+        "To automate routine tasks and assist professionals in Entertainment",
+        "AI is not yet applicable to Entertainment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Entertainment to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 172,
+      "question": "What is a major challenge for AI implementation in Agriculture?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Agriculture is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 173,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 174,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 175,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 176,
+      "question": "What problem does regularization solve in Machine Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Machine Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 177,
+      "question": "What is an Neural Networks algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Neural Networks that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 178,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 179,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 180,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 181,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 182,
+      "question": "What period in AI history is often referred to as the 'AI Winter'?",
+      "options": [
+        "The 1950s when AI research first began",
+        "The periods in the 1970s and 1980s-90s when funding and interest in AI decreased",
+        "The early 2000s before deep learning became popular",
+        "The current period of AI development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The term 'AI Winter' refers to periods (particularly in the 1970s and late 1980s through the 1990s) when funding and interest in AI research decreased due to disillusionment after initial high expectations weren't met."
+    },
+    {
+      "id": 183,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 184,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Deep Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Deep Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 185,
+      "question": "What problem does regularization solve in Reinforcement Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Reinforcement Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 186,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 187,
+      "question": "What is a major challenge for AI implementation in Healthcare?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Healthcare is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 188,
+      "question": "Which type of AI technology has shown the most promise in Finance?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Finance due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 189,
+      "question": "How is AI currently being used in Transportation?",
+      "options": [
+        "To completely replace human workers in Transportation",
+        "For administrative tasks only in Transportation",
+        "To automate routine tasks and assist professionals in Transportation",
+        "AI is not yet applicable to Transportation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Transportation to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 190,
+      "question": "What is a major challenge for AI implementation in Education?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Education is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 191,
+      "question": "Which type of AI technology has shown the most promise in Entertainment?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Entertainment due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 192,
+      "question": "How is AI currently being used in Agriculture?",
+      "options": [
+        "To completely replace human workers in Agriculture",
+        "For administrative tasks only in Agriculture",
+        "To automate routine tasks and assist professionals in Agriculture",
+        "AI is not yet applicable to Agriculture"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Agriculture to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 193,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 194,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 195,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 196,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Machine Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Machine Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 197,
+      "question": "What problem does regularization solve in Neural Networks models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Neural Networks adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 198,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 199,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 200,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 201,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 202,
+      "question": "Which early AI program, developed in the mid-1960s, could engage in conversation with humans about psychological problems?",
+      "options": [
+        "SHRDLU",
+        "MYCIN",
+        "ELIZA",
+        "Deep Blue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ELIZA was an early natural language processing program created by Joseph Weizenbaum in the mid-1960s that simulated a psychotherapist by using pattern matching and substitution methods."
+    },
+    {
+      "id": 203,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 204,
+      "question": "What is an Deep Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Deep Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 205,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Reinforcement Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Reinforcement Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 206,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 207,
+      "question": "How is AI currently being used in Healthcare?",
+      "options": [
+        "To completely replace human workers in Healthcare",
+        "For administrative tasks only in Healthcare",
+        "To automate routine tasks and assist professionals in Healthcare",
+        "AI is not yet applicable to Healthcare"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Healthcare to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 208,
+      "question": "What is a major challenge for AI implementation in Finance?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Finance is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 209,
+      "question": "Which type of AI technology has shown the most promise in Transportation?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Transportation due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 210,
+      "question": "How is AI currently being used in Education?",
+      "options": [
+        "To completely replace human workers in Education",
+        "For administrative tasks only in Education",
+        "To automate routine tasks and assist professionals in Education",
+        "AI is not yet applicable to Education"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Education to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 211,
+      "question": "What is a major challenge for AI implementation in Entertainment?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Entertainment is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 212,
+      "question": "Which type of AI technology has shown the most promise in Agriculture?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Agriculture due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 213,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 214,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 215,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 216,
+      "question": "What is a Machine Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Machine Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 217,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Neural Networks?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Neural Networks, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 218,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 219,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 220,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 221,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 222,
+      "question": "Who published the paper 'Computing Machinery and Intelligence' which proposed the Turing Test?",
+      "options": [
+        "John McCarthy",
+        "Alan Turing",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Alan Turing published the paper 'Computing Machinery and Intelligence' in 1950, which introduced what later became known as the Turing Test."
+    },
+    {
+      "id": 223,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 224,
+      "question": "What problem does regularization solve in Deep Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Deep Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 225,
+      "question": "What is an Reinforcement Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Reinforcement Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 226,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 227,
+      "question": "Which type of AI technology has shown the most promise in Healthcare?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Healthcare due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 228,
+      "question": "How is AI currently being used in Finance?",
+      "options": [
+        "To completely replace human workers in Finance",
+        "For administrative tasks only in Finance",
+        "To automate routine tasks and assist professionals in Finance",
+        "AI is not yet applicable to Finance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Finance to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 229,
+      "question": "What is a major challenge for AI implementation in Transportation?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Transportation is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 230,
+      "question": "Which type of AI technology has shown the most promise in Education?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Education due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 231,
+      "question": "How is AI currently being used in Entertainment?",
+      "options": [
+        "To completely replace human workers in Entertainment",
+        "For administrative tasks only in Entertainment",
+        "To automate routine tasks and assist professionals in Entertainment",
+        "AI is not yet applicable to Entertainment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Entertainment to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 232,
+      "question": "What is a major challenge for AI implementation in Agriculture?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Agriculture is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 233,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 234,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 235,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 236,
+      "question": "What problem does regularization solve in Machine Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Machine Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 237,
+      "question": "What is an Neural Networks algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Neural Networks that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 238,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 239,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 240,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 241,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 242,
+      "question": "What period in AI history is often referred to as the 'AI Winter'?",
+      "options": [
+        "The 1950s when AI research first began",
+        "The periods in the 1970s and 1980s-90s when funding and interest in AI decreased",
+        "The early 2000s before deep learning became popular",
+        "The current period of AI development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The term 'AI Winter' refers to periods (particularly in the 1970s and late 1980s through the 1990s) when funding and interest in AI research decreased due to disillusionment after initial high expectations weren't met."
+    },
+    {
+      "id": 243,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 244,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Deep Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Deep Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 245,
+      "question": "What problem does regularization solve in Reinforcement Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Reinforcement Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 246,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 247,
+      "question": "What is a major challenge for AI implementation in Healthcare?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Healthcare is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 248,
+      "question": "Which type of AI technology has shown the most promise in Finance?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Finance due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 249,
+      "question": "How is AI currently being used in Transportation?",
+      "options": [
+        "To completely replace human workers in Transportation",
+        "For administrative tasks only in Transportation",
+        "To automate routine tasks and assist professionals in Transportation",
+        "AI is not yet applicable to Transportation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Transportation to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 250,
+      "question": "What is a major challenge for AI implementation in Education?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Education is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 251,
+      "question": "Which type of AI technology has shown the most promise in Entertainment?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Entertainment due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 252,
+      "question": "How is AI currently being used in Agriculture?",
+      "options": [
+        "To completely replace human workers in Agriculture",
+        "For administrative tasks only in Agriculture",
+        "To automate routine tasks and assist professionals in Agriculture",
+        "AI is not yet applicable to Agriculture"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Agriculture to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 253,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 254,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 255,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 256,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Machine Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Machine Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 257,
+      "question": "What problem does regularization solve in Neural Networks models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Neural Networks adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 258,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 259,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 260,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 261,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 262,
+      "question": "Which early AI program, developed in the mid-1960s, could engage in conversation with humans about psychological problems?",
+      "options": [
+        "SHRDLU",
+        "MYCIN",
+        "ELIZA",
+        "Deep Blue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ELIZA was an early natural language processing program created by Joseph Weizenbaum in the mid-1960s that simulated a psychotherapist by using pattern matching and substitution methods."
+    },
+    {
+      "id": 263,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 264,
+      "question": "What is an Deep Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Deep Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 265,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Reinforcement Learning?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Reinforcement Learning, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 266,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 267,
+      "question": "How is AI currently being used in Healthcare?",
+      "options": [
+        "To completely replace human workers in Healthcare",
+        "For administrative tasks only in Healthcare",
+        "To automate routine tasks and assist professionals in Healthcare",
+        "AI is not yet applicable to Healthcare"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Healthcare to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 268,
+      "question": "What is a major challenge for AI implementation in Finance?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Finance is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 269,
+      "question": "Which type of AI technology has shown the most promise in Transportation?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Transportation due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 270,
+      "question": "How is AI currently being used in Education?",
+      "options": [
+        "To completely replace human workers in Education",
+        "For administrative tasks only in Education",
+        "To automate routine tasks and assist professionals in Education",
+        "AI is not yet applicable to Education"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Education to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 271,
+      "question": "What is a major challenge for AI implementation in Entertainment?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Entertainment is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 272,
+      "question": "Which type of AI technology has shown the most promise in Agriculture?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Agriculture due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 273,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 274,
+      "question": "What is 'AI alignment' referring to?",
+      "options": [
+        "Making sure AI systems' objectives and values align with human objectives and values",
+        "Aligning multiple AI systems to work together",
+        "Ensuring AI code follows programming standards",
+        "Correcting hardware alignment in AI systems"
+      ],
+      "correctAnswer": 0,
+      "explanation": "AI alignment refers to ensuring that AI systems' objectives and values align with human objectives and values, to prevent unintended consequences from misaligned goals."
+    },
+    {
+      "id": 275,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 276,
+      "question": "What is a Machine Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Machine Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 277,
+      "question": "Which evaluation metric is most appropriate for imbalanced datasets in Neural Networks?",
+      "options": [
+        "Accuracy",
+        "Precision-Recall curve",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For imbalanced datasets in Neural Networks, precision-recall curves are more informative than accuracy, as accuracy can be misleading when class distributions are skewed."
+    },
+    {
+      "id": 278,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 279,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 280,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 281,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 282,
+      "question": "Who published the paper 'Computing Machinery and Intelligence' which proposed the Turing Test?",
+      "options": [
+        "John McCarthy",
+        "Alan Turing",
+        "Marvin Minsky",
+        "Claude Shannon"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Alan Turing published the paper 'Computing Machinery and Intelligence' in 1950, which introduced what later became known as the Turing Test."
+    },
+    {
+      "id": 283,
+      "question": "AI Applications: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 284,
+      "question": "What problem does regularization solve in Deep Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Deep Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 285,
+      "question": "What is an Reinforcement Learning algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Reinforcement Learning that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 286,
+      "question": "Expert Systems: What is the difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning requires labeled data, while unsupervised learning works with unlabeled data",
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses neural networks, while unsupervised learning uses decision trees",
+        "Supervised learning is for classification tasks only, while unsupervised learning is for regression tasks only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Supervised learning algorithms are trained using labeled data, where the desired output is known. Unsupervised learning algorithms work with unlabeled data and try to find patterns or structure in the data without predefined outputs."
+    },
+    {
+      "id": 287,
+      "question": "Which type of AI technology has shown the most promise in Healthcare?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Healthcare due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 288,
+      "question": "How is AI currently being used in Finance?",
+      "options": [
+        "To completely replace human workers in Finance",
+        "For administrative tasks only in Finance",
+        "To automate routine tasks and assist professionals in Finance",
+        "AI is not yet applicable to Finance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Finance to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 289,
+      "question": "What is a major challenge for AI implementation in Transportation?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Transportation is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 290,
+      "question": "Which type of AI technology has shown the most promise in Education?",
+      "options": [
+        "Expert systems",
+        "Machine learning algorithms",
+        "Quantum computing",
+        "Blockchain technology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Machine learning algorithms have shown the most promise in Education due to their ability to analyze large datasets, identify patterns, and continuously improve over time."
+    },
+    {
+      "id": 291,
+      "question": "How is AI currently being used in Entertainment?",
+      "options": [
+        "To completely replace human workers in Entertainment",
+        "For administrative tasks only in Entertainment",
+        "To automate routine tasks and assist professionals in Entertainment",
+        "AI is not yet applicable to Entertainment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AI is being used in Entertainment to automate routine tasks, analyze large datasets, and provide decision support for professionals, enhancing productivity rather than replacing humans entirely."
+    },
+    {
+      "id": 292,
+      "question": "What is a major challenge for AI implementation in Agriculture?",
+      "options": [
+        "The cost of hardware",
+        "Data privacy and security concerns",
+        "Lack of internet connectivity",
+        "Resistance from software developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A major challenge for AI implementation in Agriculture is data privacy and security concerns, as these applications often handle sensitive information that must be protected."
+    },
+    {
+      "id": 293,
+      "question": "What ethical concern is raised by AI-generated deepfakes?",
+      "options": [
+        "High computational requirements",
+        "Potential for misinformation and manipulation",
+        "Copyright violations",
+        "Lack of artistic quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deepfakes raise serious ethical concerns about misinformation, as they can be used to create convincing fake content of real people, potentially damaging reputations or spreading false information."
+    },
+    {
+      "id": 294,
+      "question": "What is the 'black box problem' in AI ethics?",
+      "options": [
+        "When an AI system crashes unexpectedly",
+        "When AI algorithms make decisions that cannot be easily explained or understood by humans",
+        "When AI systems are developed using proprietary technology",
+        "When AI systems have security vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'black box problem' refers to the lack of transparency in AI systems where their decision-making processes are not easily explainable or interpretable by humans."
+    },
+    {
+      "id": 295,
+      "question": "Future of AI: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    },
+    {
+      "id": 296,
+      "question": "What problem does regularization solve in Machine Learning models?",
+      "options": [
+        "Underfitting",
+        "Overfitting",
+        "Slow convergence",
+        "Model interpretability"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regularization in Machine Learning adds a penalty term to the loss function to prevent overfitting by discouraging complex models."
+    },
+    {
+      "id": 297,
+      "question": "What is an Neural Networks algorithm commonly used for classification tasks?",
+      "options": [
+        "K-means",
+        "Linear Regression",
+        "Random Forest",
+        "Principal Component Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Random Forest is a popular classification algorithm in Neural Networks that builds multiple decision trees and merges their predictions."
+    },
+    {
+      "id": 298,
+      "question": "Natural Language Processing: What is an activation function in neural networks?",
+      "options": [
+        "A function that initializes the neural network",
+        "A function that determines whether a neuron should be active or not",
+        "A function that transforms the output of a neuron, introducing non-linearity",
+        "A function that activates the training process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An activation function in neural networks transforms the weighted sum of inputs into an output value. It introduces non-linearity, allowing the network to learn complex patterns and relationships in the data."
+    },
+    {
+      "id": 299,
+      "question": "Computer Vision: What is tokenization in NLP?",
+      "options": [
+        "Converting text into numerical tokens for machine learning models",
+        "Breaking text into smaller units like words, phrases, or characters",
+        "The process of securing text data using encryption tokens",
+        "Removing punctuation and special characters from text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tokenization is the process of breaking text into smaller units called tokens, such as words, phrases, symbols, or other elements, to facilitate text analysis and processing in NLP."
+    },
+    {
+      "id": 300,
+      "question": "Robotics: What is algorithmic bias in AI?",
+      "options": [
+        "A programming error in the algorithm",
+        "A deliberate feature to make AI systems more efficient",
+        "When AI systems systematically and unfairly discriminate against certain individuals or groups",
+        "The tendency of AI to prefer certain algorithms over others"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Algorithmic bias occurs when an AI system systematically and unfairly discriminates against certain individuals or groups. This can happen due to biased training data, flawed algorithm design, or inappropriate use of AI systems."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "front": "What is Artificial Intelligence?",
+      "back": "The simulation of human intelligence in machines that are programmed to think and learn like humans."
+    },
+    {
+      "id": 2,
+      "front": "What's the difference between narrow AI and general AI?",
+      "back": "Narrow AI is designed for a specific task (like facial recognition), while general AI would have broad human-like intelligence across many domains."
+    },
+    {
+      "id": 3,
+      "front": "What is Machine Learning?",
+      "back": "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed."
+    },
+    {
+      "id": 4,
+      "front": "What is the Turing Test?",
+      "back": "A test proposed by Alan Turing in 1950 to determine if a machine can exhibit intelligent behavior indistinguishable from a human."
+    },
+    {
+      "id": 5,
+      "front": "What is a neural network?",
+      "back": "A computational model inspired by the human brain, consisting of layers of interconnected nodes (neurons) that can learn patterns in data."
+    },
+    {
+      "id": 6,
+      "front": "What does 'training' mean in machine learning?",
+      "back": "The process of feeding data to an algorithm so it can learn patterns and relationships, adjusting its internal parameters to improve performance."
+    },
+    {
+      "id": 7,
+      "front": "What is Natural Language Processing (NLP)?",
+      "back": "The branch of AI that focuses on enabling computers to understand, interpret, generate, and respond to human language in a valuable way."
+    },
+    {
+      "id": 8,
+      "front": "What is Computer Vision?",
+      "back": "The field of AI that enables computers to interpret and understand visual information from the world, such as images and videos."
+    },
+    {
+      "id": 9,
+      "front": "What is the primary goal of supervised learning?",
+      "back": "To train a model on labeled data so it can learn to predict or classify new, unseen data accurately."
+    },
+    {
+      "id": 10,
+      "front": "What is a key ethical concern in AI development?",
+      "back": "Several key concerns exist, including: bias and discrimination, privacy and surveillance, transparency, accountability, job displacement, and safety."
+    }
+  ]
+}

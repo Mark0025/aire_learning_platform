@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Learning Module Schema",
+  "description": "Schema for learning modules in the study app",
+  "type": "object",
+  "required": ["moduleId", "moduleName", "questions"],
+  "properties": {
+    "moduleId": {
+      "type": "string",
+      "description": "Unique identifier for the module"
+    },
+    "moduleName": {
+      "type": "string",
+      "description": "Display name for the module"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the module content"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category to group related modules"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Difficulty level of the module"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for search and categorization"
+    },
+    "coverImage": {
+      "type": "string",
+      "description": "Path to the module's cover image (optional)"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of questions for this module (required)",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "question", "options", "correctAnswer"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the question"
+          },
+          "question": {
+            "type": "string",
+            "description": "The question text"
+          },
+          "options": {
+            "type": "array",
+            "description": "List of possible answers",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "correctAnswer": {
+            "type": "integer",
+            "description": "Index of the correct answer in the options array (0-based)"
+          },
+          "explanation": {
+            "type": "string",
+            "description": "Explanation of the correct answer (optional but recommended)"
+          },
+          "image": {
+            "type": "string",
+            "description": "Path to an image associated with this question (optional)"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "medium", "hard"],
+            "description": "Difficulty level of this specific question (optional)"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags specific to this question (optional)"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["multiple-choice", "true-false", "fill-in"],
+            "default": "multiple-choice",
+            "description": "Type of question (defaults to multiple-choice)"
+          }
+        }
+      }
+    },
+    "flashcards": {
+      "type": "array",
+      "description": "List of flashcards for this module (optional)",
+      "items": {
+        "type": "object",
+        "required": ["id", "front", "back"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the flashcard"
+          },
+          "front": {
+            "type": "string",
+            "description": "Content for the front of the flashcard"
+          },
+          "back": {
+            "type": "string",
+            "description": "Content for the back of the flashcard"
+          },
+          "image": {
+            "type": "string",
+            "description": "Path to an image associated with this flashcard (optional)"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags specific to this flashcard (optional)"
+          }
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation date of the module"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update date of the module"
+    }
+  }
+} 

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User History | Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .history-card {
+      border-left: 4px solid;
+      transition: transform 0.2s;
+    }
+    
+    .history-card:hover {
+      transform: translateY(-2px);
+    }
+    
+    .score-high {
+      border-color: #10b981;
+    }
+    
+    .score-medium {
+      border-color: #3b82f6;
+    }
+    
+    .score-low {
+      border-color: #ef4444;
+    }
+    
+    .loading-spinner {
+      border: 3px solid rgba(0, 0, 0, 0.1);
+      border-top: 3px solid #3b82f6;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .progress-bar {
+      height: 8px;
+      border-radius: 4px;
+      background-color: #e5e7eb;
+      overflow: hidden;
+    }
+    
+    .progress-value {
+      height: 100%;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-indigo-800 mb-2">🐃 Learning Platform</h1>
+      <p class="text-lg text-gray-600 mb-4">User History & Progress</p>
+      
+      <nav class="mt-4">
+        <a href="index.html" class="text-indigo-600 hover:text-indigo-800 mr-4">Quiz Game</a>
+        <a href="flashcards.html" class="text-indigo-600 hover:text-indigo-800 mr-4">Flashcards</a>
+        <a href="upload.html" class="text-indigo-600 hover:text-indigo-800 mr-4">Upload</a>
+        <a href="user-history.html" class="text-indigo-600 hover:text-indigo-800 font-bold">History</a>
+      </nav>
+    </header>
+
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-indigo-700">User History</h2>
+        
+        <div class="flex items-center space-x-2">
+          <div id="user-id-display" class="text-sm font-mono bg-gray-100 p-2 rounded">No user selected</div>
+          <button id="refresh-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white py-1 px-4 rounded text-sm">
+            Refresh
+          </button>
+        </div>
+      </div>
+      
+      <!-- Admin Panel - Only visible in dev mode -->
+      <div id="admin-panel" class="mb-8 hidden">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-medium text-indigo-700">Admin Panel - All Users</h3>
+          <div class="flex gap-2">
+            <button id="admin-generate-user-btn" class="bg-green-600 hover:bg-green-700 text-white py-1 px-4 rounded text-sm">
+              Generate New User
+            </button>
+            <button id="admin-refresh-btn" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded text-sm">
+              Refresh User List
+            </button>
+          </div>
+        </div>
+        
+        <div id="admin-loading" class="py-4 text-center">
+          <div class="loading-spinner mb-2"></div>
+          <p class="text-gray-600">Loading users...</p>
+        </div>
+        
+        <div id="admin-users-empty" class="py-4 text-center hidden">
+          <p class="text-gray-600">No simulated users found. Run npm run dev:sim to create some.</p>
+        </div>
+        
+        <div id="admin-users-table" class="hidden overflow-x-auto">
+          <table class="min-w-full bg-white">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User ID</th>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created</th>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Questions</th>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Accuracy</th>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modules</th>
+                <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-users-list" class="divide-y divide-gray-200">
+              <!-- User rows will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- User Stats Overview -->
+      <div id="user-stats" class="mb-8 p-4 bg-indigo-50 rounded-lg hidden">
+        <h3 class="text-lg font-medium text-indigo-700 mb-4">User Overview</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <p class="text-sm text-gray-500">Total Questions Answered</p>
+            <p id="stat-total-answered" class="text-2xl font-semibold text-indigo-600">0</p>
+            <div class="mt-2">
+              <p class="text-xs text-gray-500 mb-1">Correct Answers</p>
+              <div class="progress-bar">
+                <div id="stat-correct-bar" class="progress-value bg-green-500" style="width: 0%"></div>
+              </div>
+              <p id="stat-correct-percent" class="text-xs text-right mt-1">0%</p>
+            </div>
+          </div>
+          
+          <div class="bg-white p-4 rounded shadow-sm">
+            <p class="text-sm text-gray-500">Modules Started</p>
+            <p id="stat-modules-started" class="text-2xl font-semibold text-indigo-600">0</p>
+            <div class="mt-2">
+              <p class="text-xs text-gray-500 mb-1">Completed Modules</p>
+              <div class="progress-bar">
+                <div id="stat-modules-completed-bar" class="progress-value bg-blue-500" style="width: 0%"></div>
+              </div>
+              <p id="stat-modules-completed-percent" class="text-xs text-right mt-1">0%</p>
+            </div>
+          </div>
+          
+          <div class="bg-white p-4 rounded shadow-sm">
+            <p class="text-sm text-gray-500">Average Score</p>
+            <p id="stat-average-score" class="text-2xl font-semibold text-indigo-600">0%</p>
+            <div class="mt-2">
+              <p class="text-xs text-gray-500 mb-1">Last Quiz Score</p>
+              <div class="progress-bar">
+                <div id="stat-last-score-bar" class="progress-value bg-purple-500" style="width: 0%"></div>
+              </div>
+              <p id="stat-last-score-percent" class="text-xs text-right mt-1">0%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Module Progress -->
+      <div id="module-progress-section" class="mb-8 hidden">
+        <h3 class="text-lg font-medium text-indigo-700 mb-4">Module Progress</h3>
+        <div id="module-progress-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Module progress cards will be inserted here -->
+        </div>
+      </div>
+      
+      <!-- Quiz History -->
+      <div id="quiz-history-section">
+        <h3 class="text-lg font-medium text-indigo-700 mb-4">Quiz History</h3>
+        
+        <div id="history-loading" class="py-10 text-center">
+          <div class="loading-spinner mb-4"></div>
+          <p class="text-gray-600">Loading user history...</p>
+        </div>
+        
+        <div id="history-empty" class="py-10 text-center hidden">
+          <p class="text-gray-600">No quiz history found for this user.</p>
+        </div>
+        
+        <div id="quiz-history-container" class="space-y-4 hidden">
+          <!-- Quiz history items will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for generating new user -->
+  <div id="generate-user-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-medium text-indigo-700">Generate Simulated User</h3>
+        <button id="modal-close-btn" class="text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <form id="generate-user-form">
+        <div class="mb-4">
+          <label for="module-select" class="block text-sm font-medium text-gray-700 mb-1">Module</label>
+          <select id="module-select" class="w-full p-2 border border-gray-300 rounded-md" required>
+            <option value="">Loading modules...</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label for="question-count" class="block text-sm font-medium text-gray-700 mb-1">Number of Questions</label>
+          <input type="number" id="question-count" class="w-full p-2 border border-gray-300 rounded-md" min="1" max="100" value="10" required>
+        </div>
+        
+        <div class="mb-4">
+          <label for="batch-size" class="block text-sm font-medium text-gray-700 mb-1">Batch Size</label>
+          <select id="batch-size" class="w-full p-2 border border-gray-300 rounded-md" required>
+            <option value="5">5 questions</option>
+            <option value="10" selected>10 questions</option>
+            <option value="20">20 questions</option>
+            <option value="50">50 questions</option>
+            <option value="100">100 questions</option>
+          </select>
+        </div>
+        
+        <div class="flex justify-end">
+          <button type="button" id="modal-cancel-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition duration-300 mr-2">
+            Cancel
+          </button>
+          <button type="submit" id="modal-generate-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+            Generate
+          </button>
+        </div>
+      </form>
+      
+      <div id="generation-status" class="mt-4 text-center hidden">
+        <div class="loading-spinner mb-2 inline-block"></div>
+        <p class="text-gray-600">Generating user data...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dev Tools Panel for bottom of screen (only visible in dev mode) -->
+  <div id="history-dev-tools" class="fixed bottom-0 left-0 right-0 bg-blue-700 text-white p-2 flex gap-3 justify-start items-center z-50 font-bold hidden">
+    <span>🛠️ History Dev Tools</span>
+    <select id="dev-user-select" class="bg-white text-blue-900 font-bold py-1 px-3 rounded">
+      <option value="">Select User...</option>
+    </select>
+    <button id="dev-load-user" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded">Load Selected User</button>
+    <button id="dev-reload-users" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-1 px-3 rounded">Reload Users</button>
+    <a href="dev-tools-help.html" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded ml-auto">Help</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // DOM Elements
+      const userIdDisplay = document.getElementById('user-id-display');
+      const userStatsSection = document.getElementById('user-stats');
+      const moduleProgressSection = document.getElementById('module-progress-section');
+      const moduleProgressContainer = document.getElementById('module-progress-container');
+      const quizHistoryContainer = document.getElementById('quiz-history-container');
+      const historyLoadingElement = document.getElementById('history-loading');
+      const historyEmptyElement = document.getElementById('history-empty');
+      const refreshBtn = document.getElementById('refresh-btn');
+      
+      // Admin panel elements
+      const adminPanel = document.getElementById('admin-panel');
+      const adminRefreshBtn = document.getElementById('admin-refresh-btn');
+      const adminLoadingElement = document.getElementById('admin-loading');
+      const adminUsersEmptyElement = document.getElementById('admin-users-empty');
+      const adminUsersTable = document.getElementById('admin-users-table');
+      const adminUsersList = document.getElementById('admin-users-list');
+      
+      // Stats elements
+      const statTotalAnswered = document.getElementById('stat-total-answered');
+      const statCorrectBar = document.getElementById('stat-correct-bar');
+      const statCorrectPercent = document.getElementById('stat-correct-percent');
+      const statModulesStarted = document.getElementById('stat-modules-started');
+      const statModulesCompletedBar = document.getElementById('stat-modules-completed-bar');
+      const statModulesCompletedPercent = document.getElementById('stat-modules-completed-percent');
+      const statAverageScore = document.getElementById('stat-average-score');
+      const statLastScoreBar = document.getElementById('stat-last-score-bar');
+      const statLastScorePercent = document.getElementById('stat-last-score-percent');
+      
+      // Check for development mode
+      const isDevMode = new URLSearchParams(window.location.search).has('dev');
+      const historyDevTools = document.getElementById('history-dev-tools');
+      
+      // Modal elements
+      const generateUserModal = document.getElementById('generate-user-modal');
+      const generateUserForm = document.getElementById('generate-user-form');
+      const moduleSelect = document.getElementById('module-select');
+      const questionCount = document.getElementById('question-count');
+      const batchSize = document.getElementById('batch-size');
+      const generationStatus = document.getElementById('generation-status');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalCancelBtn = document.getElementById('modal-cancel-btn');
+      
+      if (isDevMode) {
+        // Show dev tools
+        historyDevTools.classList.remove('hidden');
+        adminPanel.classList.remove('hidden');
+        
+        // Load user dropdown and admin panel
+        loadSimulatedUsers();
+        loadAdminPanel();
+        loadAvailableModules();
+        
+        // Add reload users button functionality
+        document.getElementById('dev-reload-users').addEventListener('click', () => {
+          loadSimulatedUsers();
+        });
+        
+        // Add admin refresh button functionality
+        adminRefreshBtn.addEventListener('click', () => {
+          loadAdminPanel();
+        });
+        
+        // Add generate new user button functionality
+        document.getElementById('admin-generate-user-btn').addEventListener('click', () => {
+          showGenerateUserModal();
+        });
+        
+        // Add direct selection change event for faster usage
+        document.getElementById('dev-user-select').addEventListener('change', (e) => {
+          const selectedUserId = e.target.value;
+          if (selectedUserId) {
+            localStorage.setItem('currentUserId', selectedUserId);
+            userIdDisplay.textContent = `User: ${selectedUserId.substring(0, 15)}...`;
+            loadUserData(selectedUserId);
+          }
+        });
+        
+        // Modal close handlers
+        modalCloseBtn.addEventListener('click', hideGenerateUserModal);
+        modalCancelBtn.addEventListener('click', hideGenerateUserModal);
+        
+        // Form submission
+        generateUserForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          generateSimulatedUser();
+        });
+      }
+      
+      // Get current user ID from localStorage
+      const currentUserId = localStorage.getItem('currentUserId');
+      
+      if (currentUserId) {
+        userIdDisplay.textContent = `User: ${currentUserId.substring(0, 15)}...`;
+        loadUserData(currentUserId);
+      } else {
+        userIdDisplay.textContent = 'No user selected';
+        historyLoadingElement.classList.add('hidden');
+        historyEmptyElement.classList.remove('hidden');
+      }
+      
+      // Refresh button
+      refreshBtn.addEventListener('click', () => {
+        const userId = localStorage.getItem('currentUserId');
+        if (userId) {
+          loadUserData(userId);
+        } else {
+          alert('No user selected. Please select a user in dev mode first.');
+        }
+      });
+      
+      // Load simulated users for dev mode
+      async function loadSimulatedUsers() {
+        try {
+          const response = await fetch('/api/dev/users?dev=true');
+          const data = await response.json();
+          
+          const devUserSelect = document.getElementById('dev-user-select');
+          
+          // Clear and populate user list
+          devUserSelect.innerHTML = '<option value="">Select User...</option>';
+          
+          if (data.users && data.users.length > 0) {
+            data.users.forEach(user => {
+              const option = document.createElement('option');
+              option.value = user.userId;
+              option.textContent = `${user.userId.substring(0, 15)}... (${user.totalAnswered} answers)`;
+              option.title = `Created: ${new Date(user.createdAt).toLocaleString()}\nAnswers: ${user.totalAnswered} (${user.totalCorrect} correct)\nModules: ${user.moduleCount}`;
+              devUserSelect.appendChild(option);
+            });
+            
+            // Select current user if available
+            if (currentUserId) {
+              const currentOption = Array.from(devUserSelect.options).find(opt => opt.value === currentUserId);
+              if (currentOption) {
+                currentOption.selected = true;
+              }
+            }
+          }
+          
+          // Load user button
+          document.getElementById('dev-load-user').addEventListener('click', () => {
+            const selectedUserId = devUserSelect.value;
+            
+            if (!selectedUserId) {
+              alert('Please select a valid user');
+              return;
+            }
+            
+            // Set the selected user ID in localStorage
+            localStorage.setItem('currentUserId', selectedUserId);
+            userIdDisplay.textContent = `User: ${selectedUserId.substring(0, 15)}...`;
+            loadUserData(selectedUserId);
+          });
+        } catch (error) {
+          console.error('Error loading simulated users:', error);
+        }
+      }
+      
+      // Function to load admin panel with all users
+      async function loadAdminPanel() {
+        // Show loading state
+        adminLoadingElement.classList.remove('hidden');
+        adminUsersEmptyElement.classList.add('hidden');
+        adminUsersTable.classList.add('hidden');
+        adminUsersList.innerHTML = '';
+        
+        try {
+          // Fetch all users
+          const response = await fetch('/api/dev/users?dev=true');
+          const data = await response.json();
+          
+          if (!data.users || data.users.length === 0) {
+            // No users found
+            adminLoadingElement.classList.add('hidden');
+            adminUsersEmptyElement.classList.remove('hidden');
+            return;
+          }
+          
+          // Sort users by most recent first
+          const sortedUsers = [...data.users].sort((a, b) => {
+            return new Date(b.lastUpdated || b.createdAt) - new Date(a.lastUpdated || a.createdAt);
+          });
+          
+          // Populate the users table
+          sortedUsers.forEach(user => {
+            const row = document.createElement('tr');
+            row.className = 'hover:bg-gray-50';
+            
+            // Calculate accuracy
+            const accuracy = user.totalAnswered > 0 
+              ? Math.round((user.totalCorrect / user.totalAnswered) * 100) 
+              : 0;
+            
+            // Format date
+            const createdDate = new Date(user.createdAt).toLocaleString('en-US', {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            });
+            
+            row.innerHTML = `
+              <td class="py-3 px-4 text-sm font-mono">
+                ${user.userId.substring(0, 20)}...
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-500">
+                ${createdDate}
+              </td>
+              <td class="py-3 px-4">
+                <div class="flex items-center">
+                  <span class="text-sm font-medium mr-2">${user.totalAnswered}</span>
+                  <div class="flex-1 h-2 bg-gray-200 rounded-full max-w-[100px]">
+                    <div class="h-2 bg-blue-500 rounded-full" style="width: ${Math.min(100, user.totalAnswered / 3)}%"></div>
+                  </div>
+                </div>
+              </td>
+              <td class="py-3 px-4">
+                <div class="flex items-center">
+                  <span class="text-sm font-medium mr-2">${accuracy}%</span>
+                  <div class="flex-1 h-2 bg-gray-200 rounded-full max-w-[100px]">
+                    <div class="h-2 ${accuracy >= 80 ? 'bg-green-500' : (accuracy >= 60 ? 'bg-blue-500' : 'bg-red-500')} rounded-full" style="width: ${accuracy}%"></div>
+                  </div>
+                </div>
+              </td>
+              <td class="py-3 px-4 text-sm">
+                ${user.moduleCount}
+              </td>
+              <td class="py-3 px-4">
+                <button class="load-user-btn bg-indigo-600 hover:bg-indigo-700 text-white text-xs py-1 px-2 rounded" data-user-id="${user.userId}">
+                  View
+                </button>
+              </td>
+            `;
+            
+            adminUsersList.appendChild(row);
+          });
+          
+          // Add event listeners to the view buttons
+          document.querySelectorAll('.load-user-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const userId = btn.dataset.userId;
+              localStorage.setItem('currentUserId', userId);
+              userIdDisplay.textContent = `User: ${userId.substring(0, 15)}...`;
+              loadUserData(userId);
+              
+              // Update the dropdown selection
+              const devUserSelect = document.getElementById('dev-user-select');
+              const option = Array.from(devUserSelect.options).find(opt => opt.value === userId);
+              if (option) {
+                option.selected = true;
+              }
+              
+              // Scroll to user data
+              userStatsSection.scrollIntoView({ behavior: 'smooth' });
+            });
+          });
+          
+          // Show the table
+          adminLoadingElement.classList.add('hidden');
+          adminUsersTable.classList.remove('hidden');
+          
+        } catch (error) {
+          console.error('Error loading admin panel:', error);
+          adminLoadingElement.classList.add('hidden');
+          adminUsersEmptyElement.classList.remove('hidden');
+        }
+      }
+      
+      // Load user data and display
+      async function loadUserData(userId) {
+        console.log("Loading user data for:", userId);
+        // Reset UI state
+        historyLoadingElement.classList.remove('hidden');
+        historyEmptyElement.classList.add('hidden');
+        quizHistoryContainer.classList.add('hidden');
+        quizHistoryContainer.innerHTML = '';
+        moduleProgressContainer.innerHTML = '';
+        userStatsSection.classList.add('hidden');
+        moduleProgressSection.classList.add('hidden');
+        
+        try {
+          // Try to load the user progress data
+          const response = await fetch(`/data/progress_${userId}.json?dev=true`);
+          
+          if (!response.ok) {
+            throw new Error('Failed to load user data');
+          }
+          
+          const userData = await response.json();
+          console.log("Loaded user data:", userData);
+          
+          // Update stats
+          updateUserStats(userData);
+          
+          // Load module progress
+          loadModuleProgress(userData);
+          
+          // Load quiz history
+          loadQuizHistory(userData);
+          
+          // Show user stats section
+          userStatsSection.classList.remove('hidden');
+          
+        } catch (error) {
+          console.error('Error loading user data:', error);
+          historyLoadingElement.classList.add('hidden');
+          historyEmptyElement.classList.remove('hidden');
+          userStatsSection.classList.add('hidden');
+          moduleProgressSection.classList.add('hidden');
+        }
+      }
+      
+      // Update user stats overview
+      function updateUserStats(userData) {
+        if (!userData) return;
+        
+        // Total questions answered
+        const totalAnswered = userData.totalAnswered || 0;
+        statTotalAnswered.textContent = totalAnswered;
+        
+        // Correct answers percentage
+        const correctAnswers = userData.totalCorrect || 0;
+        const correctPercent = totalAnswered > 0 ? Math.round((correctAnswers / totalAnswered) * 100) : 0;
+        statCorrectBar.style.width = `${correctPercent}%`;
+        statCorrectPercent.textContent = `${correctPercent}% (${correctAnswers}/${totalAnswered})`;
+        
+        // Modules
+        const modulesStarted = Object.keys(userData.modules || {}).length;
+        statModulesStarted.textContent = modulesStarted;
+        
+        // Completed modules
+        const completedModules = Object.values(userData.modules || {}).filter(m => m.completed).length;
+        const completedPercent = modulesStarted > 0 ? Math.round((completedModules / modulesStarted) * 100) : 0;
+        statModulesCompletedBar.style.width = `${completedPercent}%`;
+        statModulesCompletedPercent.textContent = `${completedPercent}% (${completedModules}/${modulesStarted})`;
+        
+        // Average score
+        const quizHistory = userData.quizHistory || [];
+        let averageScore = 0;
+        if (quizHistory.length > 0) {
+          const totalScore = quizHistory.reduce((sum, quiz) => sum + quiz.score, 0);
+          averageScore = Math.round(totalScore / quizHistory.length);
+        }
+        statAverageScore.textContent = `${averageScore}%`;
+        
+        // Last quiz score
+        const lastQuiz = quizHistory[quizHistory.length - 1];
+        if (lastQuiz) {
+          statLastScoreBar.style.width = `${lastQuiz.score}%`;
+          statLastScorePercent.textContent = `${Math.round(lastQuiz.score)}% (${lastQuiz.correctAnswers}/${lastQuiz.totalQuestions})`;
+        } else {
+          statLastScoreBar.style.width = '0%';
+          statLastScorePercent.textContent = 'N/A';
+        }
+      }
+      
+      // Load module progress
+      function loadModuleProgress(userData) {
+        if (!userData || !userData.modules) return;
+        
+        const modules = userData.modules;
+        
+        if (Object.keys(modules).length === 0) {
+          moduleProgressSection.classList.add('hidden');
+          return;
+        }
+        
+        moduleProgressSection.classList.remove('hidden');
+        moduleProgressContainer.innerHTML = '';
+        
+        // Load module names
+        fetch('/learning/modules/index.json')
+          .then(response => response.json())
+          .then(indexData => {
+            const moduleMap = {};
+            
+            // Create a map of module IDs to names
+            indexData.modules.forEach(module => {
+              moduleMap[module.moduleId] = {
+                name: module.moduleName,
+                questionCount: module.questionCount
+              };
+            });
+            
+            // Create module progress cards
+            Object.entries(modules).forEach(([moduleId, moduleData]) => {
+              const moduleName = moduleMap[moduleId]?.name || moduleId;
+              const totalQuestions = moduleMap[moduleId]?.questionCount || 0;
+              
+              const card = document.createElement('div');
+              card.className = 'bg-white rounded-lg shadow-sm p-4';
+              
+              const completionPercent = totalQuestions > 0 
+                ? Math.round((moduleData.questionsAnswered / totalQuestions) * 100) 
+                : 0;
+              
+              const correctPercent = moduleData.questionsAnswered > 0 
+                ? Math.round((moduleData.correctAnswers / moduleData.questionsAnswered) * 100) 
+                : 0;
+              
+              let statusBadge = '';
+              if (moduleData.completed) {
+                statusBadge = '<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Completed</span>';
+              } else if (moduleData.questionsAnswered > 0) {
+                statusBadge = '<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">In Progress</span>';
+              } else {
+                statusBadge = '<span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Not Started</span>';
+              }
+              
+              card.innerHTML = `
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-medium text-gray-900">${moduleName}</h4>
+                  ${statusBadge}
+                </div>
+                
+                <div class="space-y-3">
+                  <div>
+                    <div class="flex justify-between text-xs text-gray-500 mb-1">
+                      <span>Completion</span>
+                      <span>${moduleData.questionsAnswered}/${totalQuestions} questions</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-value bg-blue-500" style="width: ${completionPercent}%"></div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div class="flex justify-between text-xs text-gray-500 mb-1">
+                      <span>Accuracy</span>
+                      <span>${moduleData.correctAnswers}/${moduleData.questionsAnswered} correct</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress-value bg-green-500" style="width: ${correctPercent}%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mt-3 text-xs text-gray-500">
+                  Last answered: ${moduleData.lastAnswered ? new Date(moduleData.lastAnswered).toLocaleString() : 'Never'}
+                </div>
+              `;
+              
+              moduleProgressContainer.appendChild(card);
+            });
+          })
+          .catch(error => {
+            console.error('Error loading module index:', error);
+          });
+      }
+      
+      // Load quiz history
+      function loadQuizHistory(userData) {
+        if (!userData || !userData.quizHistory) return;
+        
+        const quizHistory = userData.quizHistory;
+        
+        if (quizHistory.length === 0) {
+          historyLoadingElement.classList.add('hidden');
+          historyEmptyElement.classList.remove('hidden');
+          return;
+        }
+        
+        // Fetch module names
+        fetch('/learning/modules/index.json')
+          .then(response => response.json())
+          .then(indexData => {
+            const moduleMap = {};
+            
+            // Create a map of module IDs to names
+            indexData.modules.forEach(module => {
+              moduleMap[module.moduleId] = module.moduleName;
+            });
+            
+            // Clear history container
+            quizHistoryContainer.innerHTML = '';
+            
+            // Create quiz history items (newest first)
+            quizHistory.slice().reverse().forEach(quiz => {
+              const moduleName = moduleMap[quiz.moduleId] || quiz.moduleId;
+              const score = Math.round(quiz.score);
+              
+              let scoreClass = 'score-low';
+              if (score >= 80) {
+                scoreClass = 'score-high';
+              } else if (score >= 60) {
+                scoreClass = 'score-medium';
+              }
+              
+              const quizDate = new Date(quiz.endTime || quiz.startTime).toLocaleString();
+              
+              const historyItem = document.createElement('div');
+              historyItem.className = `history-card bg-white rounded-lg shadow-sm p-4 ${scoreClass}`;
+              
+              historyItem.innerHTML = `
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="font-medium text-gray-900">${moduleName}</h4>
+                    <p class="text-sm text-gray-500">${quizDate}</p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-xl font-bold ${score >= 80 ? 'text-green-600' : (score >= 60 ? 'text-blue-600' : 'text-red-600')}">
+                      ${score}%
+                    </p>
+                    <p class="text-sm text-gray-600">${quiz.correctAnswers}/${quiz.totalQuestions} correct</p>
+                  </div>
+                </div>
+                
+                <div class="mt-2">
+                  <div class="progress-bar">
+                    <div class="progress-value ${score >= 80 ? 'bg-green-500' : (score >= 60 ? 'bg-blue-500' : 'bg-red-500')}" 
+                         style="width: ${score}%"></div>
+                  </div>
+                </div>
+              `;
+              
+              quizHistoryContainer.appendChild(historyItem);
+            });
+            
+            // Update UI state
+            historyLoadingElement.classList.add('hidden');
+            historyEmptyElement.classList.add('hidden');
+            quizHistoryContainer.classList.remove('hidden');
+          })
+          .catch(error => {
+            console.error('Error loading module index:', error);
+            historyLoadingElement.classList.add('hidden');
+            historyEmptyElement.classList.remove('hidden');
+          });
+      }
+      
+      // Function to load available modules for the dropdown
+      async function loadAvailableModules() {
+        try {
+          const response = await fetch('/learning/modules/index.json');
+          const data = await response.json();
+          
+          moduleSelect.innerHTML = '';
+          
+          if (data.modules && data.modules.length > 0) {
+            // Add "all modules" option
+            const allOption = document.createElement('option');
+            allOption.value = "all";
+            allOption.textContent = "All Modules";
+            moduleSelect.appendChild(allOption);
+            
+            // Add individual modules
+            data.modules.forEach(module => {
+              if (module.questionCount > 0) {
+                const option = document.createElement('option');
+                option.value = module.moduleId;
+                option.textContent = `${module.moduleName} (${module.questionCount} questions)`;
+                moduleSelect.appendChild(option);
+              }
+            });
+          } else {
+            const option = document.createElement('option');
+            option.value = "";
+            option.textContent = "No modules available";
+            option.disabled = true;
+            moduleSelect.appendChild(option);
+          }
+        } catch (error) {
+          console.error('Error loading modules:', error);
+          moduleSelect.innerHTML = '<option value="">Error loading modules</option>';
+        }
+      }
+      
+      // Function to show the generate user modal
+      function showGenerateUserModal() {
+        generateUserModal.classList.remove('hidden');
+        generationStatus.classList.add('hidden');
+        moduleSelect.focus();
+      }
+      
+      // Function to hide the generate user modal
+      function hideGenerateUserModal() {
+        generateUserModal.classList.add('hidden');
+      }
+      
+      // Function to generate a simulated user
+      async function generateSimulatedUser() {
+        // Get form values
+        const selectedModuleId = moduleSelect.value;
+        const selectedQuestionCount = parseInt(questionCount.value, 10);
+        const selectedBatchSize = parseInt(batchSize.value, 10);
+        
+        if (!selectedModuleId) {
+          alert('Please select a module.');
+          return;
+        }
+        
+        // Show loading status
+        generationStatus.classList.remove('hidden');
+        document.getElementById('modal-generate-btn').disabled = true;
+        
+        try {
+          // Create a random user ID similar to what the simulator script would create
+          const userId = `sim_user_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+          
+          // Get module data
+          let moduleData, moduleQuestions;
+          
+          if (selectedModuleId === 'all') {
+            // Get all modules
+            const indexResponse = await fetch('/learning/modules/index.json');
+            const indexData = await indexResponse.json();
+            
+            // For simplicity in the browser, we'll just use the first module with questions
+            for (const module of indexData.modules) {
+              if (module.questionCount > 0) {
+                const moduleResponse = await fetch(`/learning/modules/${module.moduleId}.json`);
+                moduleData = await moduleResponse.json();
+                if (moduleData.questions && moduleData.questions.length > 0) {
+                  break;
+                }
+              }
+            }
+          } else {
+            // Get specific module
+            const moduleResponse = await fetch(`/learning/modules/${selectedModuleId}.json`);
+            moduleData = await moduleResponse.json();
+          }
+          
+          if (!moduleData || !moduleData.questions || moduleData.questions.length === 0) {
+            throw new Error('No questions found in selected module');
+          }
+          
+          // Determine how many questions to use
+          let questionsToUse = moduleData.questions;
+          
+          if (selectedQuestionCount > 0 && selectedQuestionCount < questionsToUse.length) {
+            // Shuffle and slice for random subset
+            questionsToUse = [...questionsToUse]
+              .sort(() => Math.random() - 0.5)
+              .slice(0, selectedQuestionCount);
+          }
+          
+          // Limit to batch size if specified
+          if (selectedBatchSize > 0 && selectedBatchSize < questionsToUse.length) {
+            questionsToUse = questionsToUse.slice(0, selectedBatchSize);
+          }
+          
+          // Create progress data structure
+          const now = new Date().toISOString();
+          const userProgress = {
+            userId,
+            modules: {},
+            answeredQuestions: {},
+            quizHistory: [],
+            totalCorrect: 0,
+            totalAnswered: 0,
+            createdAt: now,
+            lastUpdated: now
+          };
+          
+          // Initialize module data
+          userProgress.modules[moduleData.moduleId] = {
+            started: now,
+            questionsAnswered: 0,
+            correctAnswers: 0,
+            lastAnswered: now,
+            completed: false
+          };
+          
+          // Create quiz session
+          const quizSession = {
+            sessionId: `session_${Date.now()}`,
+            moduleId: moduleData.moduleId,
+            startTime: now,
+            endTime: now,
+            totalQuestions: questionsToUse.length,
+            correctAnswers: 0,
+            score: 0
+          };
+          
+          // Generate random answers
+          let correctCount = 0;
+          
+          questionsToUse.forEach(question => {
+            // Random answer
+            const randomIndex = Math.floor(Math.random() * question.options.length);
+            const isCorrect = randomIndex === question.correctAnswer;
+            
+            // Store in answered questions
+            userProgress.answeredQuestions[question.id] = {
+              moduleId: moduleData.moduleId,
+              userAnswer: randomIndex,
+              correct: isCorrect,
+              answeredAt: now,
+              attemptCount: 1
+            };
+            
+            // Update module statistics
+            userProgress.modules[moduleData.moduleId].questionsAnswered++;
+            if (isCorrect) {
+              userProgress.modules[moduleData.moduleId].correctAnswers++;
+              correctCount++;
+            }
+            
+            // Update overall statistics
+            userProgress.totalAnswered++;
+            if (isCorrect) {
+              userProgress.totalCorrect++;
+            }
+          });
+          
+          // Complete the quiz with score
+          const score = questionsToUse.length > 0 ? (correctCount / questionsToUse.length) * 100 : 0;
+          quizSession.correctAnswers = correctCount;
+          quizSession.score = score;
+          
+          // Add to quiz history
+          userProgress.quizHistory.push(quizSession);
+          
+          // Mark module as completed if score is high enough
+          if (score >= 80) {
+            userProgress.modules[moduleData.moduleId].completed = true;
+            userProgress.modules[moduleData.moduleId].completedAt = now;
+          }
+          
+          // Send user data to server to save
+          const saveResponse = await fetch('/api/dev/save-user-progress?dev=true', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userProgress)
+          });
+          
+          if (!saveResponse.ok) {
+            throw new Error('Failed to save user progress');
+          }
+          
+          const result = await saveResponse.json();
+          
+          if (result.success) {
+            // Set as current user
+            localStorage.setItem('currentUserId', userId);
+            
+            // Reload admin panel and user dropdown
+            loadAdminPanel();
+            loadSimulatedUsers();
+            
+            // Hide modal
+            hideGenerateUserModal();
+            
+            // Show success message
+            alert(`User generated successfully: ${userId}`);
+            
+            // Load the new user's data
+            userIdDisplay.textContent = `User: ${userId.substring(0, 15)}...`;
+            loadUserData(userId);
+          } else {
+            throw new Error(result.message || 'Failed to save user progress');
+          }
+          
+        } catch (error) {
+          console.error('Error generating user:', error);
+          alert(`Error generating user: ${error.message}`);
+          document.getElementById('modal-generate-btn').disabled = false;
+          generationStatus.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+</body>
+</html> 

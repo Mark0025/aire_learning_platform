@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Game Dev Tools Documentation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    
+    .doc-section {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .issue {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background-color: #f3f4f6;
+      border-radius: 0.5rem;
+    }
+    
+    .code {
+      font-family: monospace;
+      background-color: #f3f4f6;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+    
+    pre {
+      background-color: #f3f4f6;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    
+    .steps {
+      margin-left: 1.5rem;
+    }
+    
+    .notes {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background-color: #e0f2fe;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-200 min-h-screen">
+  <div class="container bg-white rounded-lg shadow-lg p-6 my-6">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-indigo-800 mb-2">🛠️ Study Game Dev Tools Guide</h1>
+      <a href="index.html" class="text-indigo-600 hover:text-indigo-800 font-bold">← Back to Game</a>
+    </header>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Enabling Dev Mode</h2>
+      <p class="mb-4">To enable the development tools, add <span class="code">?dev=true</span> to the URL:</p>
+      <pre>http://localhost:3000/?dev=true</pre>
+      <p class="mt-4">This will activate both the floating dev panel in the top-right corner and the fixed dev toolbar at the bottom of the screen.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Available Dev Tools</h2>
+      
+      <h3 class="text-xl font-semibold text-indigo-600 mb-3">1. Answer Randomly</h3>
+      <p class="mb-2"><strong>Purpose:</strong> Automatically answers all questions in the current quiz session with random selections.</p>
+      
+      <p class="mb-2"><strong>How to use:</strong></p>
+      <ol class="steps mb-4">
+        <li>Select a module and start a quiz</li>
+        <li>Click "Answer Randomly" in either dev panel</li>
+        <li>The system will instantly select random answers for all questions</li>
+        <li>A notification will show your final score (e.g., "Randomly answered all questions. Score: 2/10")</li>
+      </ol>
+      
+      <div class="notes">
+        <p class="font-medium mb-1">Notes:</p>
+        <ul class="list-disc ml-5">
+          <li>This tool is useful for quickly testing quiz completion flow</li>
+          <li>The score will vary as answers are selected randomly</li>
+          <li>You can still navigate through questions to review the randomly selected answers</li>
+        </ul>
+      </div>
+      
+      <h3 class="text-xl font-semibold text-indigo-600 mb-3 mt-6">2. Load Simulated User</h3>
+      <p class="mb-2"><strong>Purpose:</strong> Load progress data from previously simulated users created via the simulation script.</p>
+      
+      <p class="mb-2"><strong>How to use:</strong></p>
+      <ol class="steps mb-4">
+        <li>Click "Load Simulated User" in either dev panel</li>
+        <li>A dropdown will appear with available simulated users</li>
+        <li>Select a user from the list</li>
+        <li>Click "Load Selected User"</li>
+        <li>The page will reload with the selected user's progress data</li>
+      </ol>
+      
+      <div class="notes">
+        <p class="font-medium mb-1">Notes:</p>
+        <ul class="list-disc ml-5">
+          <li>Simulated users are created by running <span class="code">npm run dev:sim</span></li>
+          <li>Each simulated user has their own history, progress, and statistics</li>
+          <li>You can use this to test the UI with different progress states</li>
+        </ul>
+      </div>
+      
+      <h3 class="text-xl font-semibold text-indigo-600 mb-3 mt-6">3. Clear Storage</h3>
+      <p class="mb-2"><strong>Purpose:</strong> Reset all local storage data to start with a clean state.</p>
+      
+      <p class="mb-2"><strong>How to use:</strong></p>
+      <ol class="steps mb-4">
+        <li>Click "Clear Storage" in either dev panel</li>
+        <li>Confirm the action in the alert dialog</li>
+        <li>The page will reload with all local storage data cleared</li>
+      </ol>
+      
+      <div class="notes">
+        <p class="font-medium mb-1">Notes:</p>
+        <ul class="list-disc ml-5">
+          <li>This is useful when you want to reset your testing environment</li>
+          <li>All progress, settings, and user data will be removed from the browser</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Creating Simulated User Data</h2>
+      <p class="mb-4">To generate simulated user data for testing:</p>
+      
+      <ol class="steps mb-4">
+        <li>Run the simulation script:
+          <pre>npm run dev:sim</pre>
+        </li>
+        <li>Follow the prompts to select modules and number of questions</li>
+        <li>The script will create a simulated user with random answers</li>
+        <li>Load this user with the "Load Simulated User" tool</li>
+      </ol>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Testing Multiple Questions</h2>
+      <p class="mb-4">When testing question batches:</p>
+      
+      <ol class="steps mb-4">
+        <li>Make sure to set the desired batch size in the settings (5, 10, 20, etc.)</li>
+        <li>Start the quiz with a module containing enough questions</li>
+        <li>If you need to answer quickly, use the "Answer Randomly" tool</li>
+      </ol>
+      
+      <div class="notes">
+        <p>The batch size setting limits the number of questions shown in a session, which is helpful for testing different quiz lengths.</p>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Troubleshooting</h2>
+      
+      <div class="issue">
+        <p class="font-semibold">Issue: Dev tools aren't visible</p>
+        <p>Solution: Make sure you have <span class="code">?dev=true</span> in your URL</p>
+      </div>
+      
+      <div class="issue">
+        <p class="font-semibold">Issue: Can't load simulated users</p>
+        <p>Solution: Run the simulation script first: <span class="code">npm run dev:sim</span></p>
+      </div>
+      
+      <div class="issue">
+        <p class="font-semibold">Issue: Random answers not working</p>
+        <p>Solution: Ensure you've selected a module and started a quiz</p>
+      </div>
+      
+      <div class="issue">
+        <p class="font-semibold">Issue: Only seeing a subset of questions</p>
+        <p>Solution: Check your batch size setting - it limits the number of questions per session</p>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Best Practices</h2>
+      
+      <ol class="list-decimal ml-5 space-y-2">
+        <li>Use simulated users for testing user progress features</li>
+        <li>Use random answers for quickly testing quiz completion</li>
+        <li>Clear storage between major test scenarios</li>
+        <li>Use different batch sizes to test the quiz with varying question counts</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html> 

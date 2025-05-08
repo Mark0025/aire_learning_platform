@@ -1,0 +1,99 @@
+{
+  "userId": "sim_user_1746651446015_o4vd0gela",
+  "modules": {
+    "intro-to-ai": {
+      "started": "2025-05-07T20:57:26.021Z",
+      "questionsAnswered": 10,
+      "correctAnswers": 3,
+      "lastAnswered": "2025-05-07T20:57:26.022Z",
+      "completed": false
+    }
+  },
+  "answeredQuestions": {
+    "26": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 1,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "50": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 0,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "94": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 3,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "115": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 2,
+      "correct": true,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "116": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 2,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "154": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 2,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "199": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 2,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "246": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 0,
+      "correct": true,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "251": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 1,
+      "correct": true,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    },
+    "295": {
+      "moduleId": "intro-to-ai",
+      "userAnswer": 0,
+      "correct": false,
+      "answeredAt": "2025-05-07T20:57:26.022Z",
+      "attemptCount": 1
+    }
+  },
+  "quizHistory": [
+    {
+      "sessionId": "session_1746651446022_e3zgf4gep",
+      "moduleId": "intro-to-ai",
+      "startTime": "2025-05-07T20:57:26.022Z",
+      "endTime": "2025-05-07T20:57:26.022Z",
+      "totalQuestions": 10,
+      "correctAnswers": 3,
+      "score": 30
+    }
+  ],
+  "totalCorrect": 3,
+  "totalAnswered": 10,
+  "createdAt": "2025-05-07T20:57:26.020Z",
+  "lastUpdated": "2025-05-07T20:57:26.022Z"
+}
