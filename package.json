@@ -1,0 +1,16 @@
+{
+  "name": "aire-learning-platform",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "cd AIRE_LEARNING_PLATFORM/study-game && npm start",
+    "build": "cd AIRE_LEARNING_PLATFORM/study-game && npm run build",
+    "vercel-build": "cd AIRE_LEARNING_PLATFORM/study-game && npm run vercel-build"
+  },
+  "workspaces": [
+    "AIRE_LEARNING_PLATFORM/study-game"
+  ]
+}
