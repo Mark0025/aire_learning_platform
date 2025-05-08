@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "outputDirectory": "AIRE_LEARNING_PLATFORM/study-game",
+  "builds": [
+    {
+      "src": "AIRE_LEARNING_PLATFORM/study-game/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/AIRE_LEARNING_PLATFORM/study-game/server.js"
+    }
+  ]
+} 
