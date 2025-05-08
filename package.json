@@ -1,16 +1,15 @@
 {
-  "name": "aire-learning-platform",
+  "name": "study-game",
   "version": "1.0.0",
-  "private": true,
-  "engines": {
-    "node": "22.x"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "cd AIRE_LEARNING_PLATFORM/study-game && npm start",
-    "build": "cd AIRE_LEARNING_PLATFORM/study-game && npm run build",
-    "vercel-build": "cd AIRE_LEARNING_PLATFORM/study-game && npm run vercel-build"
-  },
-  "workspaces": [
-    "AIRE_LEARNING_PLATFORM/study-game"
-  ]
-}
+    "start": "NODE_PORT=4000 node index.js",
+    "dev": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\"",
+    "dev:sim": "node src/scripts/dev-simulator.js",
+    "dev:with-sim": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\" \"npm run dev:sim\"",
+    "build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css",
+    "vercel-build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css && mkdir -p src/learning/modules && touch src/learning/modules/index.json",
+    "import-module": "node src/learning/scripts/import-module.js",
+    "list-modules": "node -e \"console.table(require('./src/learning/modules/index.json').modules.map(m => ({moduleId: m.moduleId, name: m.moduleName, questions: m.questionCount, flashcards: m.flashcardCount})))\""
+  }
+} 

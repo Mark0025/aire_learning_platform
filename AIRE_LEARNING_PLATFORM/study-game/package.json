@@ -1,23 +1,23 @@
 {
   "name": "study-game",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "NODE_PORT=4000 node server.js",
-    "dev": "concurrently \"NODE_PORT=4000 node server.js\" \"npx tailwindcss -i ./src/style.css -o ./public/style.css --watch\"",
-    "dev:sim": "node scripts/dev-simulator.js",
-    "dev:with-sim": "concurrently \"NODE_PORT=4000 node server.js\" \"npx tailwindcss -i ./src/style.css -o ./public/style.css --watch\" \"npm run dev:sim\"",
-    "build": "npx tailwindcss -i ./src/style.css -o ./public/style.css",
-    "vercel-build": "mkdir -p public && npx tailwindcss -i ./src/style.css -o ./public/style.css && mkdir -p learning/modules && touch learning/modules/index.json",
-    "import-module": "node learning/scripts/import-module.js",
-    "list-modules": "node -e \"console.table(require('./learning/modules/index.json').modules.map(m => ({moduleId: m.moduleId, name: m.moduleName, questions: m.questionCount, flashcards: m.flashcardCount})))\""
+    "start": "NODE_PORT=4000 node index.js",
+    "dev": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\"",
+    "dev:sim": "node src/scripts/dev-simulator.js",
+    "dev:with-sim": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\" \"npm run dev:sim\"",
+    "build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css",
+    "vercel-build": "npx tailwindcss -i ./src/style.css -o ./src/public/style.css && mkdir -p src/learning/modules && touch src/learning/modules/index.json",
+    "import-module": "node src/learning/scripts/import-module.js",
+    "list-modules": "node -e \"console.table(require('./src/learning/modules/index.json').modules.map(m => ({moduleId: m.moduleId, name: m.moduleName, questions: m.questionCount, flashcards: m.flashcardCount})))\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "engines": {
-    "node": "18.x"
+    "node": ">=20.x"
   },
   "dependencies": {
     "ajv": "^8.12.0",

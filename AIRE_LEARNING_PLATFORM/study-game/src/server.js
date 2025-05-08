@@ -7,7 +7,7 @@ const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
 const mime = require('mime');
 // Import the module generator
-const { generateModuleFromText, saveModule } = require('./src/scripts/generate-module-from-text.js');
+const { generateModuleFromText, saveModule } = require('./scripts/generate-module-from-text.js');
 
 const app = express();
 const PORT = process.env.NODE_PORT || process.env.PORT || 3000;
@@ -308,6 +308,5 @@ app.post('/api/generate-module-from-text', express.json({ limit: '10mb' }), asyn
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-}); 
+// Don't export directly - we'll use a separate file as entry point
+module.exports = app; 
