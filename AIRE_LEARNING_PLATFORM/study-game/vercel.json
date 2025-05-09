@@ -4,8 +4,15 @@
     { "src": "index.js", "use": "@vercel/node" }
   ],
   "routes": [
+    { "src": "/learning/(.*)", "dest": "/index.js" },
+    { "src": "/api/(.*)", "dest": "/index.js" },
+    { "src": "/docs/(.*)", "dest": "/index.js" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.js" }
   ],
+  "env": {
+    "NODE_ENV": "production"
+  },
   "outputDirectory": "src/public",
   "public": true
 } 
