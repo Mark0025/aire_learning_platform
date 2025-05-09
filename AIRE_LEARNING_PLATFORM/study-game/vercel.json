@@ -1,16 +1,11 @@
 {
   "version": 2,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs22.x"
-    },
-    "index.js": {
-      "runtime": "nodejs22.x"
-    }
-  },
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ],
   "outputDirectory": "src/public",
-  "public": true,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.js" }
-  ]
+  "public": true
 } 
