@@ -315,7 +315,7 @@ app.post('/api/generate-module-from-text', express.json({ limit: '10mb' }), asyn
 });
 
 // Documentation endpoint - serve markdown files as HTML
-app.get('/docs/:file?', async (req, res) => {
+app.get('/docs/:file', async (req, res) => {
   try {
     // Only allow access if dev parameter is present in the query string
     if (req.query.dev === undefined) {
@@ -323,7 +323,137 @@ app.get('/docs/:file?', async (req, res) => {
     }
     
     const file = req.params.file || 'AIRE_LEARNING_PLATFORM-documentation';
-    const filePath = path.join(__dirname, '..', '..', `${file}.md`);
+    const filePath = path.join(__dirname, 'public', 'docs', `${file}.md`);
+    
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).send(`Documentation file ${file}.md not found.`);
+    }
+    
+    const mdContent = await readFile(filePath, 'utf8');
+    const htmlContent = marked.parse(mdContent);
+    
+    // Simple HTML template with some basic styling
+    const html = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AIRE Learning Platform - Documentation</title>
+        <style>
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+          }
+          
+          h1, h2, h3, h4, h5, h6 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0070f3;
+          }
+          
+          h1 { font-size: 2.5rem; border-bottom: 2px solid #eaeaea; padding-bottom: 0.5rem; }
+          h2 { font-size: 2rem; border-bottom: 1px solid #eaeaea; padding-bottom: 0.3rem; }
+          
+          pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+          }
+          
+          code {
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 85%;
+          }
+          
+          pre code {
+            background-color: transparent;
+            padding: 0;
+          }
+          
+          blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 1rem;
+            color: #666;
+            margin: 1rem 0;
+          }
+          
+          img {
+            max-width: 100%;
+          }
+          
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+          }
+          
+          table, th, td {
+            border: 1px solid #ddd;
+          }
+          
+          th, td {
+            padding: 8px 12px;
+            text-align: left;
+          }
+          
+          th {
+            background-color: #f6f8fa;
+          }
+
+          .doc-nav {
+            background-color: #f6f8fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+          }
+          
+          .doc-nav a {
+            margin-right: 1rem;
+            color: #0070f3;
+            text-decoration: none;
+          }
+          
+          .doc-nav a:hover {
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="doc-nav">
+          <a href="/docs/AIRE_LEARNING_PLATFORM-documentation?dev">Main Documentation</a>
+          <a href="/docs/AIRE_LEARNING_PLATFORM-codebase?dev">Codebase Documentation</a>
+        </div>
+        ${htmlContent}
+      </body>
+      </html>
+    `;
+    
+    res.send(html);
+  } catch (error) {
+    console.error('Error serving documentation:', error);
+    res.status(500).send('Error serving documentation: ' + error.message);
+  }
+});
+
+// Add a default documentation route
+app.get('/docs', async (req, res) => {
+  try {
+    // Only allow access if dev parameter is present in the query string
+    if (req.query.dev === undefined) {
+      return res.status(403).send('Access denied. Add ?dev to the URL to view documentation.');
+    }
+    
+    const file = 'AIRE_LEARNING_PLATFORM-documentation';
+    const filePath = path.join(__dirname, 'public', 'docs', `${file}.md`);
     
     if (!fs.existsSync(filePath)) {
       return res.status(404).send(`Documentation file ${file}.md not found.`);
