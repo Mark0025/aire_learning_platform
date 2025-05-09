@@ -7,7 +7,7 @@
     "dev": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\"",
     "dev:sim": "node src/scripts/dev-simulator.js",
     "dev:with-sim": "concurrently \"NODE_PORT=4000 node index.js\" \"npx tailwindcss -i ./src/style.css -o ./src/public/style.css --watch\" \"npm run dev:sim\"",
-    "build": "mkdir -p src/learning/modules && touch src/learning/modules/index.json",
+    "build": "mkdir -p src/learning/modules src/learning/uploads src/data && touch src/learning/modules/index.json",
     "import-module": "node src/learning/scripts/import-module.js",
     "list-modules": "node -e \"console.table(require('./src/learning/modules/index.json').modules.map(m => ({moduleId: m.moduleId, name: m.moduleName, questions: m.questionCount, flashcards: m.flashcardCount})))\""
   },
@@ -16,7 +16,7 @@
   "license": "ISC",
   "description": "",
   "engines": {
-    "node": ">=20.x"
+    "node": "22.x"
   },
   "dependencies": {
     "ajv": "^8.12.0",
