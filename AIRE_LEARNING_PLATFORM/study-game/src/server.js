@@ -7,11 +7,14 @@ const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
 const mime = require('mime');
 const marked = require('marked');
+const cors = require('cors');
 // Import the module generator
 const { generateModuleFromText, saveModule } = require('./scripts/generate-module-from-text.js');
 
 const app = express();
 const PORT = process.env.NODE_PORT || process.env.PORT || 3000;
+n// ✅ CORS Fix: Allow all origins for API requests
+app.use(cors());
 
 // Promisify fs functions
 const readFile = promisify(fs.readFile);
@@ -574,5 +577,38 @@ app.get('/docs', async (req, res) => {
   }
 });
 
+// ✅ Alias route for /api/generate (calls /api/generate-module-from-text)
+app.post('/api/generate', express.json({ limit: '10mb' }), async (req, res) => {
+  try {
+    const { text, moduleId, moduleName, description, maxQuestions = 50 } = req.body;
+    
+    // Basic validation
+    if (!text || !moduleId || !moduleName) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Missing required fields: text, moduleId, and moduleName are required' 
+      });
+    }
+    
+    // Generate module
+    console.log(`Generating module ${moduleId} from text (${text.length} characters)`);
+    const module = generateModuleFromText(text, moduleId, moduleName, description, maxQuestions);
+    
+    // Save the module
+    await saveModule(module);
+    
+    res.json({
+      success: true,
+      message: 'Module generated and saved successfully',
+      moduleId: module.moduleId,
+      questionCount: module.questions.length
+    });
+  } catch (error) {
+    console.error('Error generating module:', error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+// 
 // Don't export directly - we'll use a separate file as entry point
 module.exports = app; 

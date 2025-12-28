@@ -1,0 +1,68 @@
+# AIRE Learning Platform - Docker Compose Configuration
+# Built by: Terry Agent (Cycle #1851)
+# Date: 2025-10-27
+
+version: '3.8'
+
+services:
+  freeblog-aireinvestor:
+    container_name: freeblog-aireinvestor
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: freeblog-aireinvestor:latest
+    restart: unless-stopped
+    
+    ports:
+      - "4000:4000"
+    
+    environment:
+      - NODE_ENV=production
+      - NODE_PORT=4000
+      - TZ=America/New_York
+    
+    volumes:
+      # Persistent data storage
+      - aire-modules:/app/src/learning/modules
+      - aire-uploads:/app/src/learning/uploads
+      - aire-data:/app/src/data
+      - aire-docs:/app/src/public/docs
+    
+    networks:
+      - nginx-network
+    
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.enable=false"
+      - "homepage.group=Education"
+      - "homepage.name=AIRE Learning Platform"
+      - "homepage.icon=si-graduation-cap"
+      - "homepage.href=https://freeblog.aireinvestor.markcarpenter1.com"
+      - "homepage.description=Real Estate Education Platform"
+    
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4000', (r) => { process.exit(r.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  aire-modules:
+    driver: local
+  aire-uploads:
+    driver: local
+  aire-data:
+    driver: local
+  aire-docs:
+    driver: local
+
+networks:
+  nginx-network:
+    external: true
