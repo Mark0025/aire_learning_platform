@@ -1,5 +1,11 @@
 # AIRE Learning Platform - Study Game
 
+## About
+- **What it is:** A quiz game that helps real estate investors learn investing concepts, with instant feedback and scores, under the AIRE brand.
+- **Business:** AIreinvestor
+- **Status:** deployed at https://freeblog-aireinvestor.markcarpenter1.com
+- **Source:** agent research 2026-11-04
+
 ![AIRE Logo](public/images/aire-logo.svg)
 
 A comprehensive web-based quiz game designed to help real estate investors and professionals master essential concepts and strategies through interactive learning.
